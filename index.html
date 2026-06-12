@@ -1,0 +1,2222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Assets/favicon.png" />
+  <title>Holiday Trolley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="root">
+    <div
+      class="min-h-screen flex flex-col justify-between bg-surface selection:bg-gold-accent selection:text-deep-navy">
+      <div class="h-screen flex flex-col">
+        <div class="w-full bg-gold-accent/80 py-2.5 px-4 text-center shrink-0">
+          <p class="text-[#12232F] font-bold text-[0.9vw] tracking-wide">Book with confidence. Call today — we'll answer
+            in under a minute.</p>
+        </div>
+        <header
+          class="sticky top-0 z-50 transition-all duration-300 border-b py-[3vh] bg-pure-white shadow-sm py-5 border-outline-variant"
+          id="main-header">
+          <div
+            class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <a class="flex items-center" href="#"><img alt="Holiday Trolley"
+                class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" /></a>
+            <nav class="hidden lg:flex gap-12 items-center"><button
+                class="text-gold-accent font-semibold relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-gold-accent font-sans text-[0.8vw] tracking-widest uppercase">Destinations</button><button
+                class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Tours</button><button
+                class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Holiday
+                Types</button><button
+                class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Special
+                Offers</button></nav>
+            <div class="flex items-center gap-4">
+              <div class="hidden xl:flex items-center"><a class="flex items-center gap-3 group"
+                  href="tel:02030237776"><svg aria-hidden="true"
+                    class="lucide lucide-phone-call text-[#EE9131] group-hover:text-[#EE9131] transition-colors shrink-0"
+                    fill="none" height="36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="1.5" viewbox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2a9 9 0 0 1 9 9"></path>
+                    <path d="M13 6a5 5 0 0 1 5 5"></path>
+                    <path
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                    </path>
+                  </svg>
+                  <div class="flex flex-col leading-tight"><span class="text-slate-400 text-[0.7vw]">9am -
+                      11pm</span><span
+                      class="text-deep-navy font-extrabold text-[1vw] tracking-wide group-hover:text-gold-accent transition-colors">0203
+                      023 7776</span></div>
+                </a></div>
+              <div class="flex gap-2 ml-[1vw]"><button
+                  class="bg-gold-accent text-pure-white px-8 py-3 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm">Enquire
+                  Now</button></div><button aria-label="Open navigation menu"
+                class="lg:hidden p-2 text-deep-navy hover:text-gold-accent transition-colors"><svg aria-hidden="true"
+                  class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 5h16"></path>
+                  <path d="M4 12h16"></path>
+                  <path d="M4 19h16"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div
+            class="lg:hidden absolute top-full left-0 w-full bg-pure-white border-b border-outline-variant shadow-xl p-6 transition-all duration-300 animate-fadeIn"
+            id="mobile-menu" style="display:none">
+            <div class="flex flex-col gap-4"><button
+                class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">All
+                Destinations</button><button
+                class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Premium
+                Tours</button><button
+                class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Holiday Types &amp;
+                Beach Escapes</button><button
+                class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Exclusive Special
+                Offers</button>
+              <div class="flex flex-col gap-3 pt-4"><a
+                  class="flex items-center gap-2 text-deep-navy font-bold py-2 justify-center border border-slate-200"
+                  href="tel:02030237776"><svg aria-hidden="true" class="lucide lucide-phone-call text-green-500"
+                    fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 2a9 9 0 0 1 9 9"></path>
+                    <path d="M13 6a5 5 0 0 1 5 5"></path>
+                    <path
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                    </path>
+                  </svg> Call 0203 023 7776</a><button
+                  class="w-full border border-deep-navy text-deep-navy py-3 font-sans text-xs tracking-widest uppercase font-bold">Get
+                  in Touch</button><button
+                  class="w-full bg-gold-accent text-pure-white py-3 font-sans text-xs tracking-widest uppercase font-bold text-center">Start
+                  Bespoke Enquiry</button></div>
+            </div>
+          </div>
+        </header>
+        <section class="relative flex-1 bg-deep-navy" data-hero="1">
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 overflow-hidden"><img alt="Maldives"
+                class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
+                src="Assets/Hero Imgs/Maldives-Hero.jpg" />
+              <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
+              <div class="max-w-4xl space-y-7">
+                <div class="flex items-center justify-center gap-3"><span
+                    class="block w-10 h-px bg-gold-accent/70"></span><span
+                    class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Tropical
+                    Paradise</span><span class="block w-10 h-px bg-gold-accent/70"></span></div>
+                <h1
+                  class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+                  style="text-shadow: rgba(0, 0, 0, 0.45) 0px 2px 24px;">Overwater Luxury Maldives</h1>
+                <p
+                  class="text-[2vw] md:text-[1.7vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">
+                  <span class="font-semibold text-pure-white">7 Nights</span> from <strong
+                    class="font-bold text-gold-accent text-[2vw] md:text-[2vw] font-serif">£2,999</strong> <span
+                    class="line-through text-white/40 text-[1.1vw]">was £3,899</span></p>
+                <div><button
+                    class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-flex items-center gap-2 cursor-pointer">Take
+                    Me There <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="20"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 z-10">
+            <div class="absolute inset-0 overflow-hidden"><img alt="Singapore"
+                class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
+                src="Assets/Hero Imgs/Singapore-Hero.jpg" />
+              <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
+              <div class="max-w-4xl space-y-7">
+                <div class="flex items-center justify-center gap-3"><span
+                    class="block w-10 h-px bg-gold-accent/70"></span><span
+                    class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Urban Luxury</span><span
+                    class="block w-10 h-px bg-gold-accent/70"></span></div>
+                <h1
+                  class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+                  style="text-shadow: rgba(0, 0, 0, 0.45) 0px 2px 24px;">Modern Singapore Getaway</h1>
+                <p
+                  class="text-[2vw] md:text-[1.7vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">
+                  <span class="font-semibold text-pure-white">5 Nights</span> from <strong
+                    class="font-bold text-gold-accent text-[2vw] md:text-[2vw] font-serif">£1,799</strong> <span
+                    class="line-through text-white/40 text-[1.1vw]">was £2,299</span></p>
+                <div><button
+                    class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-flex items-center gap-2 cursor-pointer">Take
+                    Me There <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="20"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 overflow-hidden"><img alt="Sri Lanka"
+                class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
+                src="Assets/Hero Imgs/SriLanka-Hero.jpg" />
+              <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
+              <div class="max-w-4xl space-y-7">
+                <div class="flex items-center justify-center gap-3"><span
+                    class="block w-10 h-px bg-gold-accent/70"></span><span
+                    class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Island
+                    Adventure</span><span class="block w-10 h-px bg-gold-accent/70"></span></div>
+                <h1
+                  class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+                  style="text-shadow: rgba(0, 0, 0, 0.45) 0px 2px 24px;">Sri Lanka Discovery Tour</h1>
+                <p
+                  class="text-[2vw] md:text-[1.7vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">
+                  <span class="font-semibold text-pure-white">8 Nights</span> from <strong
+                    class="font-bold text-gold-accent text-[2vw] md:text-[2vw] font-serif">£1,599</strong> <span
+                    class="line-through text-white/40 text-[1.1vw]">was £2,099</span></p>
+                <div><button
+                    class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-flex items-center gap-2 cursor-pointer">Take
+                    Me There <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="20"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 overflow-hidden"><img alt="Malaysia"
+                class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
+                src="Assets/Hero Imgs/Malaysia-Hero.jpg" />
+              <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
+              <div class="max-w-4xl space-y-7">
+                <div class="flex items-center justify-center gap-3"><span
+                    class="block w-10 h-px bg-gold-accent/70"></span><span
+                    class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Asian Gem</span><span
+                    class="block w-10 h-px bg-gold-accent/70"></span></div>
+                <h1
+                  class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+                  style="text-shadow: rgba(0, 0, 0, 0.45) 0px 2px 24px;">Malaysian Treasures</h1>
+                <p
+                  class="text-[2vw] md:text-[1.7vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">
+                  <span class="font-semibold text-pure-white">6 Nights</span> from <strong
+                    class="font-bold text-gold-accent text-[2vw] md:text-[2vw] font-serif">£1,899</strong> <span
+                    class="line-through text-white/40 text-[1.1vw]">was £2,499</span></p>
+                <div><button
+                    class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-flex items-center gap-2 cursor-pointer">Take
+                    Me There <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="20"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 overflow-hidden"><img alt="Kenya"
+                class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
+                src="Assets/Hero Imgs/Kenya-Hero.jpg" />
+              <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
+              <div class="max-w-4xl space-y-7">
+                <div class="flex items-center justify-center gap-3"><span
+                    class="block w-10 h-px bg-gold-accent/70"></span><span
+                    class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Safari
+                    Masterpiece</span><span class="block w-10 h-px bg-gold-accent/70"></span></div>
+                <h1
+                  class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+                  style="text-shadow: rgba(0, 0, 0, 0.45) 0px 2px 24px;">Luxury Kenya Safari Experience</h1>
+                <p
+                  class="text-[2vw] md:text-[1.7vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">
+                  <span class="font-semibold text-pure-white">10 Nights</span> from <strong
+                    class="font-bold text-gold-accent text-[2vw] md:text-[2vw] font-serif">£3,499</strong> <span
+                    class="line-through text-white/40 text-[1.1vw]">was £4,399</span></p>
+                <div><button
+                    class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-flex items-center gap-2 cursor-pointer">Take
+                    Me There <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="20"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
+            <div class="absolute inset-0 overflow-hidden"><img alt="Mexico"
+                class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
+                src="Assets/Hero Imgs/Mexico-Herp.jpg" />
+              <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
+              <div class="max-w-4xl space-y-7">
+                <div class="flex items-center justify-center gap-3"><span
+                    class="block w-10 h-px bg-gold-accent/70"></span><span
+                    class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Caribbean
+                    Dream</span><span class="block w-10 h-px bg-gold-accent/70"></span></div>
+                <h1
+                  class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+                  style="text-shadow: rgba(0, 0, 0, 0.45) 0px 2px 24px;">Riviera Maya Escape</h1>
+                <p
+                  class="text-[2vw] md:text-[1.7vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">
+                  <span class="font-semibold text-pure-white">7 Nights</span> from <strong
+                    class="font-bold text-gold-accent text-[2vw] md:text-[2vw] font-serif">£2,199</strong> <span
+                    class="line-through text-white/40 text-[1.1vw]">was £2,899</span></p>
+                <div><button
+                    class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-flex items-center gap-2 cursor-pointer">Take
+                    Me There <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="20"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 12h14"></path>
+                      <path d="m12 5 7 7-7 7"></path>
+                    </svg></button></div>
+              </div>
+            </div>
+          </div><button aria-label="Previous slide"
+            class="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border border-pure-white/30 bg-pure-white/10 backdrop-blur-sm flex items-center justify-center text-pure-white hover:bg-gold-accent hover:border-gold-accent transition-all duration-300 cursor-pointer"><svg
+              aria-hidden="true" class="lucide lucide-arrow-left" fill="none" height="18" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="18"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="m12 19-7-7 7-7"></path>
+              <path d="M19 12H5"></path>
+            </svg></button><button aria-label="Next slide"
+            class="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full border border-pure-white/30 bg-pure-white/10 backdrop-blur-sm flex items-center justify-center text-pure-white hover:bg-gold-accent hover:border-gold-accent transition-all duration-300 cursor-pointer"><svg
+              aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="18" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="18"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M5 12h14"></path>
+              <path d="m12 5 7 7-7 7"></path>
+            </svg></button>
+          <div class="absolute bottom-32 left-0 right-0 z-20 px-4 py-4 md:px-margin-desktop">
+            <form
+              class="max-w-4xl mx-auto bg-pure-white border border-outline-variant/50 p-5 md:p-5 shadow-2xl rounded-xs flex flex-col md:flex-row gap-3 relative">
+              <div class="flex-1 relative flex items-center pr-2 border-b md:border-b-0 md:border-r border-slate-100">
+                <svg aria-hidden="true" class="lucide lucide-search text-gold-accent shrink-0 ml-3 mr-2" fill="none"
+                  height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m21 21-4.34-4.34"></path>
+                  <circle cx="11" cy="11" r="8"></circle>
+                </svg><input
+                  class="w-full py-3 bg-transparent text-xs text-deep-navy placeholder-slate-400 focus:outline-none focus:ring-0"
+                  placeholder="Where do you want to go?" type="text" value="" />
+                <div
+                  class="absolute top-full left-0 right-0 mt-2 bg-pure-white border border-outline-variant/40 shadow-xl max-h-48 overflow-y-auto rounded-xs text-left z-30"
+                  id="search-suggestions" style="display:none">
+                  <div
+                    class="px-3 py-2 text-[0.625rem] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100">
+                    Top Curated Regions</div><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Maldives</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Barbados</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Punta Cana</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Dominican Republic</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Mexico</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Cancun</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Brazil</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Vietnam</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Cambodia</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Kenya</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Zanzibar</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Thailand</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">India</button><button
+                    class="w-full text-left px-4 py-2 text-xs text-deep-navy hover:bg-gold-accent hover:text-deep-navy transition-colors font-sans"
+                    type="button">Europe</button>
+                </div>
+              </div>
+              <div class="flex-1 flex items-center pr-2 border-b md:border-b-0 md:border-r border-slate-100"><svg
+                  aria-hidden="true" class="lucide lucide-calendar text-gold-accent shrink-0 ml-3 mr-2" fill="none"
+                  height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 2v4"></path>
+                  <path d="M16 2v4"></path>
+                  <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                  <path d="M3 10h18"></path>
+                </svg><input
+                  class="w-full py-3 bg-transparent text-xs text-deep-navy placeholder-slate-400 focus:outline-none"
+                  placeholder="When? (e.g., Oct 2026, Summer)" type="text" value="" /></div><button
+                class="bg-deep-navy text-pure-white px-8 py-3.5 md:py-3 font-sans text-xs tracking-widest uppercase font-extrabold hover:bg-gold-accent hover:text-deep-navy transition-colors shadow-sm cursor-pointer"
+                type="submit">Search Destinations</button>
+            </form>
+          </div>
+          <div class="absolute bottom-14 left-0 right-0 z-20 flex justify-center items-center gap-2">
+            <p class="text-pure-white/90 text-[1vw]">Rated <strong class="text-pure-white">4.9</strong> / 5 based on
+              <span class="underline underline-offset-2 cursor-pointer">9,658 reviews</span>. Showing our latest
+              reviews.</p><img alt="Trustpilot" class="h-6 w-auto object-contain shrink-0"
+              src="Assets/trustpilot.png" />
+            <p class="text-white text-[1vw]">Trustpilot</p>
+          </div>
+        </section>
+      </div>
+      <section class="pt-14 pb-14 bg-soft-cream px-margin-mobile md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div class="flex gap-6 items-start"><svg aria-hidden="true"
+              class="lucide lucide-shield-check text-gold-accent shrink-0 mt-0.5" fill="none" height="50"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
+              width="50" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+              </path>
+              <path d="m9 12 2 2 4-4"></path>
+            </svg>
+            <div>
+              <h3 class="font-serif font-semibold text-[1.1vw] text-deep-navy">ATOL &amp; ABTA Protected</h3>
+              <p class="text-[0.9vw] text-on-surface-variant mt-1">Dual licensing insurance means your flight money is
+                100% safeguarded.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start"><svg aria-hidden="true"
+              class="lucide lucide-compass text-gold-accent shrink-0 mt-0.5" fill="none" height="50"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
+              width="50" xmlns="http://www.w3.org/2000/svg">
+              <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z">
+              </path>
+              <circle cx="12" cy="12" r="10"></circle>
+            </svg>
+            <div>
+              <h3 class="font-serif font-semibold text-[1.1vw] text-deep-navy">39 Years of Heritage</h3>
+              <p class="text-[0.9vw] text-on-surface-variant mt-1">We’ve custom assembled dream holidays for UK couples
+                since 1987.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start"><svg aria-hidden="true"
+              class="lucide lucide-calendar text-gold-accent shrink-0 mt-0.5" fill="none" height="50"
+              stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24"
+              width="50" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 2v4"></path>
+              <path d="M16 2v4"></path>
+              <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+              <path d="M3 10h18"></path>
+            </svg>
+            <div>
+              <h3 class="font-serif font-semibold text-[1.1vw] text-deep-navy">Low deposits from £99pp*</h3>
+              <p class="text-[0.9vw] text-on-surface-variant mt-1">Lock in prime flight rates and beachfront
+                availability with easy steps.</p>
+            </div>
+          </div>
+          <div class="flex gap-6 items-start"><svg aria-hidden="true"
+              class="lucide lucide-award text-gold-accent shrink-0 mt-0.5" fill="none" height="50" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="50"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+              </path>
+              <circle cx="12" cy="8" r="6"></circle>
+            </svg>
+            <div>
+              <h3 class="font-serif font-semibold text-[1.1vw] text-deep-navy">Bespoke Price-Match*</h3>
+              <p class="text-[0.9vw] text-on-surface-variant mt-1">We will align tier-for-tier quotes on equivalent
+                luxury stays.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-30 bg-pure-white" id="holiday-listings-section">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-8">
+          <div class="space-y-3"><span
+              class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Handpicked Beach
+              &amp; Resort Escapes</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Top Holidays</h2>
+          </div>
+          <div class="relative">
+            <div
+              class="pointer-events-none absolute right-0 top-0 bottom-2 w-16 z-10 bg-gradient-to-l from-white to-transparent">
+            </div>
+            <div class="flex gap-6 overflow-x-auto scroll-smooth pb-2" data-carousel-track="1"
+              style="scrollbar-width: none;">
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Turkish Treasures &amp; Maldives Serenity Retreat"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpzmm7Hvq65Z-Iq_6JnbOjWMwJ2xH1kRccSteW88ItMy2rD_FtjXG6kQwIe10EGXk0zJ22hXNRLC6qMTIFmPcS52lNSrRixewpiBFP2KdY04eOKnKsOWqHh8GYnPGoSg-O3NaHwZ6MrtylzTR4PSI54AZYF045h1PqUiFu8-drNXzUpHiqWmBB_SH2C3BuKtvvQB1JWk7rgB1J2SIN7_m4r82bnhixD99FW1SvV4Xv4GtwD-C1I1b_acS2LSzg9idX-mB5lP5Vlk" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £750</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£3,249</span><span
+                      class="block text-white font-bold text-[1vw]">from £2,499pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>10 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Turkish Treasures &amp;
+                    Maldives Serenity Retreat</h3>
+                  <p class="text-white/65 text-[0.95vw]">Turkey &amp; Maldives</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Iberostar Waves Punta Cana"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGq7o3n0E26y2kEdzABmYYJ6YzpXglp_89aDKjGLM6NElefqCSOel7jsKeXPcemQTvRAzAgoFZb-ZQDM1t7839MdDl1PT-d5L-gT48kqs2MsM2prZ4U5VRKcEhvKdxcSNuv5r1Bj2K9jWV4OQ1piqyw2huTj45ua6pgMeZm-112n7q4omd-6ak-Df84O6KxwT-nXo0BIO4ef2ogkDLI968Gkpq9bBAacyEV-vi3widAsTD93fim-tzV4SRteY_C4x4dlUp4MoZpJ8" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £225</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£1,724</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,499pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Iberostar Waves Punta Cana
+                  </h3>
+                  <p class="text-white/65 text-[0.95vw]">Dominican Republic</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Butterfly Beach Hotel Barbados"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjiPcVNl8jq9R0FuWNVl0b1DyZ2jaPH5h7-3RARPRAeF9cn7DCmHbjAcNF0pb79fNo7RlX7n4d3fHTKqG9AeQZlfe4pkb8_6cCWxEmwSDHE9K84STb81KhO07THe__AHGSK8DO6srDAou70BZBZ2hSys91KwgbgJxGtLFkYEYWfjbkOA1jXTGeQly62y9N37VeDhHhWcM0ScKFPAKzaMb7Baec5RPDsxuV1FINyIXZKavGklLoJL0y6YGQzvkQWDCvepET7pfLZbQ" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £480</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£1,679</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,199pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Butterfly Beach Hotel Barbados
+                  </h3>
+                  <p class="text-white/65 text-[0.95vw]">Barbados</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Iberostar Selection Riviera Cancun"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD66-pmrJgrPWLD7wjUp9nbtaYdrqkApmlyKIcSl4qPFB0Q4sN2OuBygxAwePB-HKjkZaxSHpsyaCWN2EiFn8NTeOa7Xfg19a4choLZFs06-vmEpYA6Qd6wUZZDaIrZI06Xte4CE2doc8ezRBVIF-lE_howOiFW5-HqT6tYr71FOrDzsBEFpEFao3U9kZhke3-SDqS0sugAaBj7_82JKIiJcY73AQ9AGdx-vfNzYrL6QFIL2GlOzFxFJispn_DV6rWcCWwedyojbNQ" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £478</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£1,927</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,449pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Iberostar Selection Riviera
+                    Cancun</h3>
+                  <p class="text-white/65 text-[0.95vw]">Mexico</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Sandals Royal Barbados"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £500</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£2,199</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,699pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Sandals Royal Barbados</h3>
+                  <p class="text-white/65 text-[0.95vw]">Barbados</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Excellence Playa Mujeres"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://images.unsplash.com/photo-1552465011-b4e21bf6e79a?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £550</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£2,399</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,849pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Excellence Playa Mujeres</h3>
+                  <p class="text-white/65 text-[0.95vw]">Mexico</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Santorini Cliffside Retreat"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://images.unsplash.com/photo-1570077439515-c1d23c0a8bb2?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £450</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£1,799</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,349pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Santorini Cliffside Retreat
+                  </h3>
+                  <p class="text-white/65 text-[0.95vw]">Greece</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Bali Luxury Jungle Escape"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £550</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£2,149</span><span
+                      class="block text-white font-bold text-[1vw]">from £1,599pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>10 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Bali Luxury Jungle Escape</h3>
+                  <p class="text-white/65 text-[0.95vw]">Bali, Indonesia</p>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Constance Lemuria Seychelles"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer"
+                  src="https://images.unsplash.com/photo-1573843981267-be1999ff37cd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span
+                    class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg
+                      aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                      </path>
+                      <circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle>
+                    </svg>Save £900</span>
+                  <div class="text-right"><span
+                      class="block text-white/55 text-[0.85vw] line-through">£3,899</span><span
+                      class="block text-white font-bold text-[1vw]">from £2,999pp</span></div>
+                </div>
+                <div class="absolute bottom-0 left-0 right-0 p-4 z-10 space-y-1.5">
+                  <div class="flex items-center gap-1.5 text-white/75 text-[0.9vw]"><svg aria-hidden="true"
+                      class="lucide lucide-clock" fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                      stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>7 Nights</div>
+                  <div class="flex gap-0.5"><svg aria-hidden="true"
+                      class="lucide lucide-star fill-gold-accent text-gold-accent" fill="none" height="13"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg><svg aria-hidden="true" class="lucide lucide-star fill-gold-accent text-gold-accent"
+                      fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                      stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z">
+                      </path>
+                    </svg></div>
+                  <h3 class="font-bold text-white text-[1.2vw] leading-snug line-clamp-2">Constance Lemuria Seychelles
+                  </h3>
+                  <p class="text-white/65 text-[0.95vw]">Seychelles</p>
+                </div>
+              </div>
+            </div><button aria-label="Previous"
+              class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-10 w-11 h-11 rounded-full bg-gold-accent items-center justify-center text-pure-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer"><svg
+                aria-hidden="true" class="lucide lucide-chevron-right rotate-180" fill="none" height="20"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg></button><button aria-label="Next"
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-20 w-11 h-11 rounded-full bg-gold-accent flex items-center justify-center text-pure-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer"><svg
+                aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="20" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg></button>
+          </div>
+          <div class="flex justify-center pt-2"><button
+              class="inline-flex items-center gap-3 border border-deep-navy/20 text-deep-navy font-semibold text-sm pl-6 pr-1 py-1 rounded-full shadow-md hover:shadow-lg transition-shadow cursor-pointer">View
+              All Holidays<span
+                class="w-9 h-9 rounded-full bg-gold-accent flex items-center justify-center text-pure-white shrink-0"><svg
+                  aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="17" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="17"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg></span></button></div>
+        </div>
+      </section>
+      <section
+        class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-deep-navy text-pure-white text-center md:text-left relative overflow-hidden">
+        <div class="absolute right-0 bottom-0 opacity-10 select-none pointer-events-none"><svg aria-hidden="true"
+            class="lucide lucide-tree-pine text-gold-accent" fill="none" height="400" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="400"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z">
+            </path>
+            <path d="M12 22v-3"></path>
+          </svg></div>
+        <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="space-y-6"><span
+              class="text-[0.625rem] font-bold text-gold-accent uppercase tracking-widest block">Curated African
+              Masterpiece Expedition</span>
+            <h2
+              class="text-3xl md:text-5xl font-serif leading-tight font-medium uppercase tracking-tight text-pure-white">
+              Luxury Kenya Safari &amp; Zanzibar</h2>
+            <p class="text-base text-slate-300 leading-relaxed font-light">Experience the breathtaking wilderness of the
+              Masai Mara. Traverse vast savannas tracking the glorious Big Five in a customized open-air private vehicle
+              accompanied by professional nature rangers. Follow with pure tropical shoreline pampering in our boutique
+              beachfront spice villas.</p>
+            <div class="border-t border-white/10 pt-6 grid grid-cols-3 gap-4 text-left">
+              <div><span class="text-[0.625rem] text-slate-400 uppercase tracking-wider block">Duration</span><span
+                  class="font-serif text-lg text-gold-accent font-semibold">10 Nights</span></div>
+              <div><span class="text-[0.625rem] text-slate-400 uppercase tracking-wider block">Est Pricing</span><span
+                  class="font-serif text-lg text-gold-accent font-semibold">£3,199 pp*</span></div>
+              <div><span class="text-[0.625rem] text-slate-400 uppercase tracking-wider block">Protections</span><span
+                  class="font-serif text-lg text-gold-accent font-semibold">ATOL Secure</span></div>
+            </div>
+            <div class="pt-4 flex flex-col sm:flex-row gap-3"><button
+                class="bg-gold-accent text-pure-white px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-extrabold hover:bg-gold-hover transition-colors cursor-pointer text-center">Explore
+                Day Timeline</button><button
+                class="border border-white/20 hover:border-gold-accent hover:text-gold-accent px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-colors text-center cursor-pointer">Inquire
+                Instantly</button></div>
+          </div>
+          <div class="relative h-96 w-full shadow-2xl overflow-hidden group"><img alt="Golden Sunset Safari Silhouettes"
+              class="w-full h-full object-cover select-none group-hover:scale-105 transition-transform duration-700 h-full"
+              referrerpolicy="no-referrer"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjW1B55tpA86v1Fdmw0QtZMt_ol9NpS9O-36XaLaIUm4L6u9OdxXDkMQO41HmJ18N7QUIOYyUCqCO27d5Cpa8pYloXspv0zOPbDAsp-iGcGYtAHAXgIcHYqI7noTw3dThS23oQUigiciwhyjDsW8flV0mLjw4tadtv7UVZMQi-5LZLeUk6BcwJdV5bdqLZjyeussbz5DraoUCnB_bVJS-NB67rFzcimOsecGMe25p3IT-M_WHJofKYHcUVktqjgTxxfg2r_VaiZmw" /><span
+              class="absolute top-4 left-4 bg-error text-pure-white px-3 py-1 text-[0.625rem] uppercase font-bold font-sans tracking-widest">Save
+              £736 Exclusive Offer</span></div>
+        </div>
+      </section>
+      <section class="py-20 px-margin-mobile md:px-margin-desktop bg-pure-white">
+        <div class="max-w-container-max mx-auto space-y-12">
+          <div class="text-center space-y-4"><span
+              class="text-[0.625rem] font-bold text-gold-accent uppercase tracking-widest block">Inspirational
+              Handpicked Retreats</span>
+            <h2 class="text-2xl md:text-4xl font-serif text-deep-navy font-medium">Trending Destinations</h2>
+            <p class="text-sm text-on-surface-variant max-w-md mx-auto leading-relaxed">Explore our most sought-after
+              seasonal flight routes, representing legendary standard hotels and immersive activities.</p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
+              <img alt="Tanzania"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer" src="Assets/Destinations/Tanzania.jpg" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Africa</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Tanzania</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£2,199</span></div>
+              </div>
+            </div>
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
+              <img alt="Maldives"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer" src="Assets/Destinations/Maldives.avif" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Indian
+                    Ocean</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Maldives</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£1,649</span></div>
+              </div>
+            </div>
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg md:col-span-2">
+              <img alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer" src="Assets/Destinations/Bali.jpg" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Asia</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Bali</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£1,449</span></div>
+              </div>
+            </div>
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
+              <img alt="Vietnam"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer" src="Assets/Destinations/Veitnam.jpg" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Asia</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Vietnam</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£1,799</span></div>
+              </div>
+            </div>
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
+              <img alt="Thailand"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer" src="Assets/Destinations/Thailand.jpg" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Asia</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Thailand</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£999</span></div>
+              </div>
+            </div>
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
+              <img alt="Singapore"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer"
+                src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Asia</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Singapore</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£1,649</span></div>
+              </div>
+            </div>
+            <div
+              class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
+              <img alt="Kenya"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                referrerpolicy="no-referrer" src="Assets/Destinations/Kenya-Cheetah.jpg" />
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
+              <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
+                <div><span
+                    class="text-[0.625rem] text-gold-accent font-sans uppercase tracking-widest block mb-0.5">Africa</span>
+                  <h4 class="font-serif text-lg font-medium tracking-wide">Kenya</h4>
+                </div>
+                <div class="text-right"><span class="text-[9px] text-slate-300 block">From</span><span
+                    class="font-serif text-base font-bold text-gold-accent">£3,299</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-16 bg-pure-white">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-8">
+          <div class="space-y-3"><span
+              class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Distinctive Travel
+              Profiles</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Holidays By Type</h2>
+          </div>
+          <div class="relative">
+            <div
+              class="pointer-events-none absolute right-0 top-0 bottom-2 w-20 z-10 bg-gradient-to-l from-white to-transparent">
+            </div>
+            <div class="flex gap-6 overflow-x-auto scroll-smooth pb-2" data-carousel-track="1"
+              style="scrollbar-width: none;">
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Multi Centre Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/multicentre_holiday_deals_a70efadb7d.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Multi Centre Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from £549
+                    pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Safari Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/safari_holiday_deals_519c3bdd2f.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Safari Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £1,799 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Family Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/family_holiday_deals_83e75ed206.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Family Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £1,299 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Grand Prix™ Packages"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/grand_prix_packages_358b7647bf.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Grand Prix™ Packages</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £1,499 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="All-Inclusive Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/all_inclusive_holiday_deals_9d7fc6afba.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">All-Inclusive Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £1,299 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Honeymoon Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/honeymoon_holiday_deals_3e9b529ec0.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Honeymoon Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £2,499 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Luxury Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/luxury_holiday_deals_a31d3b883f.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Luxury Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £2,999 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Beach Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/beach_holiday_deals_5d72aab10e.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Beach Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from £899
+                    pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Villa Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/villa_holidays_8056998ce6.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Villa Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £1,199 pp</span>
+                </div>
+              </div>
+              <div
+                class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
+                <img alt="Adult-Only Holidays"
+                  class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  referrerpolicy="no-referrer" src="Assets/Holiday Types/adults_only_holiday_deals_150074ad61.jpg" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 right-0 p-5 z-10 flex flex-col items-center gap-3 text-center">
+                  <h3 class="font-bold text-white text-[1.4vw] leading-tight">Adult-Only Holidays</h3><span
+                    class="bg-gold-accent text-pure-white font-semibold text-[0.85vw] px-5 py-2 rounded-full">from
+                    £1,399 pp</span>
+                </div>
+              </div>
+            </div><button aria-label="Previous"
+              class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 z-20 w-11 h-11 rounded-full bg-gold-accent items-center justify-center text-pure-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer"><svg
+                aria-hidden="true" class="lucide lucide-chevron-right rotate-180" fill="none" height="20"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg></button><button aria-label="Next"
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 z-20 w-11 h-11 rounded-full bg-gold-accent flex items-center justify-center text-pure-white shadow-lg hover:opacity-90 transition-opacity cursor-pointer"><svg
+                aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="20" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="m9 18 6-6-6-6"></path>
+              </svg></button>
+          </div>
+        </div>
+      </section>
+      <section class="py-30 px-margin-mobile md:px-margin-desktop bg-soft-cream">
+        <div class="max-w-container-max mx-auto">
+          <div class="relative w-full h-[280px] md:h-[45vh] rounded-2xl overflow-hidden"><img
+              alt="You Book a Holiday, We Plant a Tree" class="absolute inset-0 w-full h-full object-cover"
+              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&amp;fit=crop&amp;w=1600&amp;q=80" />
+            <div class="absolute inset-0 bg-gradient-to-r from-black/75 via-black/40 to-transparent"></div>
+            <div class="absolute inset-0 flex flex-col justify-between p-7 md:p-10">
+              <div class="flex items-center gap-0 w-fit overflow-hidden rounded-lg shadow-lg">
+                <div class="bg-[#5ab940] flex items-center justify-center p-3"><svg aria-hidden="true"
+                    class="lucide lucide-tree-pine text-white" fill="none" height="26" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m17 14 3 3.3a1 1 0 0 1-.7 1.7H4.7a1 1 0 0 1-.7-1.7L7 14h-.3a1 1 0 0 1-.7-1.7L9 9h-.2A1 1 0 0 1 8 7.3L12 3l4 4.3a1 1 0 0 1-.8 1.7H15l3 3.3a1 1 0 0 1-.7 1.7H17Z">
+                    </path>
+                    <path d="M12 22v-3"></path>
+                  </svg></div>
+                <div class="bg-[#2d2d2d] px-4 py-2">
+                  <p class="text-[#5ab940] font-extrabold text-[1.1vw] leading-tight">1,712</p>
+                  <p class="text-white text-[0.75vw] leading-tight">Trees planted</p>
+                  <p class="text-slate-400 text-[0.65vw]">with Treeapp</p>
+                </div>
+              </div>
+              <div class="space-y-1">
+                <h2 class="text-white font-extrabold text-[2.5vw] leading-tight">You Book a Holiday</h2>
+                <h2 class="text-[#5ab940] font-extrabold text-[2.5vw] leading-tight">We Plant a Tree</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="py-20 md:py-28 px-margin-mobile md:px-margin-desktop bg-pure-white border-t border-b border-outline-variant/30">
+        <div class="max-w-container-max mx-auto space-y-12">
+          <div class="text-center space-y-4"><span
+              class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Guarantees &amp;
+              Reassurance</span>
+            <h2 class="font-serif text-2xl md:text-4xl text-deep-navy font-medium">Frequently Asked Questions</h2>
+            <p class="text-sm text-on-surface-variant max-w-md mx-auto font-light">Everything you need to know about our
+              comprehensive ATOL protections, low deposits, and booking trust rules.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="border transition-all duration-300 border-gold-accent bg-soft-cream"><button
+                aria-expanded="true"
+                class="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none cursor-pointer"><span
+                  class="font-serif text-base md:text-lg font-medium text-deep-navy pr-4">Is Holiday Trolley ATOL
+                  protected?</span><svg aria-hidden="true"
+                  class="lucide lucide-chevron-down text-gold-accent transition-transform duration-300 rotate-180"
+                  fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg></button>
+              <div
+                class="overflow-hidden transition-all duration-300 max-h-64 opacity-100 border-t border-outline-variant/20">
+                <p class="p-5 md:p-6 text-sm text-on-surface-variant leading-relaxed font-light">Yes, Holiday Trolley is
+                  ATOL-protected and holds a valid ATOL (Air Travel Organiser's Licence - 3517) issued by the UK Civil
+                  Aviation Authority. This protection helps safeguard your money and travel arrangements if your holiday
+                  gets cancelled for any reason, ensuring you can book of absolute peace of mind.</p>
+              </div>
+            </div>
+            <div
+              class="border transition-all duration-300 border-outline-variant/40 bg-soft-cream/30 hover:border-gold-accent/50">
+              <button aria-expanded="false"
+                class="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none cursor-pointer"><span
+                  class="font-serif text-base md:text-lg font-medium text-deep-navy pr-4">Are Holiday Trolley members of
+                  ABTA?</span><svg aria-hidden="true"
+                  class="lucide lucide-chevron-down text-gold-accent transition-transform duration-300 rotate-0"
+                  fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg></button>
+              <div class="overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+                <p class="p-5 md:p-6 text-sm text-on-surface-variant leading-relaxed font-light">Yes, Holiday Trolley is
+                  a proud member of ABTA (Y6438, P7124), the UK travel association, giving you added peace of mind when
+                  booking your premium holiday. ABTA membership means that we adhere strictly to high standards of
+                  service and codes of conduct.</p>
+              </div>
+            </div>
+            <div
+              class="border transition-all duration-300 border-outline-variant/40 bg-soft-cream/30 hover:border-gold-accent/50">
+              <button aria-expanded="false"
+                class="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none cursor-pointer"><span
+                  class="font-serif text-base md:text-lg font-medium text-deep-navy pr-4">Can I book holidays with low
+                  deposits?</span><svg aria-hidden="true"
+                  class="lucide lucide-chevron-down text-gold-accent transition-transform duration-300 rotate-0"
+                  fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg></button>
+              <div class="overflow-hidden transition-all duration-300 max-h-0 opacity-0">
+                <p class="p-5 md:p-6 text-sm text-on-surface-variant leading-relaxed font-light">Yes, you can secure and
+                  book holidays with low deposits at Holiday Trolley. With us, you get highly flexible payment options
+                  that allow you to safeguard your ideal holiday with an affordable initial deposit starting from just
+                  £99pp*.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        class="pb-50 pt-30 px-margin-mobile md:px-margin-desktop bg-pure-white border-t border-outline-variant/20">
+        <div class="max-w-container-max mx-auto space-y-8">
+          <div class="space-y-8">
+            <div class="space-y-2"><span
+                class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Trusted
+                Accommodation Partners</span>
+              <h3 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Our Key Hotel Partners</h3>
+            </div>
+            <div class="relative overflow-hidden">
+              <div class="flex" data-partner-track="1"
+                style="transform: translateX(-16.6667%); transition: transform 0.5s ease-in-out;">
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Atlantis The Palm Dubai" class="object-contain"
+                    src="Assets/Hotels/Atlantis_the_Palm_Dubai_c3f00d7fbb.png" style="width: 6vw; max-width: 6vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Hard Rock Hotel &amp; Casino" class="object-contain"
+                    src="Assets/Hotels/logo_HRHC_01_7b9d9ddd22.png" style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="TAJ Hotels" class="object-contain"
+                    src="Assets/Hotels/Group_1201_9c5e73939c.png" style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Banyan Tree" class="object-contain"
+                    src="Assets/Hotels/layer1_e8b490c08b.png" style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Emerald Collection" class="object-contain"
+                    src="Assets/Hotels/5db83fc3eebc46507e1162bb_emerald_collection_color_vertical_f107ef9987.png"
+                    style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="The Cocoon Collection" class="object-contain"
+                    src="Assets/Hotels/TCC_Corporate_Con_CMYK_Pos_Nero_62a499299b.png"
+                    style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Atlantis The Palm Dubai" class="object-contain"
+                    src="Assets/Hotels/Atlantis_the_Palm_Dubai_c3f00d7fbb.png" style="width: 6vw; max-width: 6vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Hard Rock Hotel &amp; Casino" class="object-contain"
+                    src="Assets/Hotels/logo_HRHC_01_7b9d9ddd22.png" style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="TAJ Hotels" class="object-contain"
+                    src="Assets/Hotels/Group_1201_9c5e73939c.png" style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Banyan Tree" class="object-contain"
+                    src="Assets/Hotels/layer1_e8b490c08b.png" style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Emerald Collection" class="object-contain"
+                    src="Assets/Hotels/5db83fc3eebc46507e1162bb_emerald_collection_color_vertical_f107ef9987.png"
+                    style="width: 6vw; max-width: 6vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="The Cocoon Collection" class="object-contain"
+                    src="Assets/Hotels/TCC_Corporate_Con_CMYK_Pos_Nero_62a499299b.png"
+                    style="width: 6vw; max-width: 6vw;" /></div>
+              </div><button aria-label="Previous"
+                class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gold-accent items-center justify-center text-pure-white shadow hover:opacity-90 transition-opacity cursor-pointer"><svg
+                  aria-hidden="true" class="lucide lucide-chevron-left" fill="none" height="18" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg></button><button aria-label="Next"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gold-accent flex items-center justify-center text-pure-white shadow hover:opacity-90 transition-opacity cursor-pointer"><svg
+                  aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="18" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg></button>
+            </div>
+          </div>
+          <div class="border-t border-outline-variant/20"></div>
+          <div class="space-y-8">
+            <div class="space-y-2 pb-6"><span
+                class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Trusted Carrier
+                Partners</span>
+              <h3 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Our Key Airline Partners</h3>
+            </div>
+            <div class="relative overflow-hidden">
+              <div class="flex" data-partner-track="1"
+                style="transform: translateX(-16.6667%); transition: transform 0.5s ease-in-out;">
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Etihad Airways" class="object-contain"
+                    src="Assets/Airlines/etihad_logo_2aa3a6f875.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="SriLankan Airlines" class="object-contain"
+                    src="Assets/Airlines/sri_lankan_airlines_logo_bff26d714c.png"
+                    style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Air India" class="object-contain"
+                    src="Assets/Airlines/air_india_logo_2d854262a9.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Turkish Airlines" class="object-contain"
+                    src="Assets/Airlines/turkish_airlines_logo_439238dd02.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Singapore Airlines" class="object-contain"
+                    src="Assets/Airlines/singapore_airlines_logo_e8b86222af.png"
+                    style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Vietnam Airlines" class="object-contain"
+                    src="Assets/Airlines/vietnam_airlines_logo_6666034ef8.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Emirates" class="object-contain"
+                    src="Assets/Airlines/emirates_logo_e0645eedaf.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Qatar Airways" class="object-contain"
+                    src="Assets/Airlines/qatar_airlines_logo_4b806b7da4.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="British Airways" class="object-contain"
+                    src="Assets/Airlines/british_airways_logo_3782351f99.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Cathay Pacific" class="object-contain"
+                    src="Assets/Airlines/cathay_pacific_logo_cc7b731ac9.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Kenya Airways" class="object-contain"
+                    src="Assets/Airlines/kenya_airways_logo_8b632f0537.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Gulf Air" class="object-contain"
+                    src="Assets/Airlines/gulf_air_logo_5281b00d3b.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Etihad Airways" class="object-contain"
+                    src="Assets/Airlines/etihad_logo_2aa3a6f875.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="SriLankan Airlines" class="object-contain"
+                    src="Assets/Airlines/sri_lankan_airlines_logo_bff26d714c.png"
+                    style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Air India" class="object-contain"
+                    src="Assets/Airlines/air_india_logo_2d854262a9.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Turkish Airlines" class="object-contain"
+                    src="Assets/Airlines/turkish_airlines_logo_439238dd02.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Singapore Airlines" class="object-contain"
+                    src="Assets/Airlines/singapore_airlines_logo_e8b86222af.png"
+                    style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Vietnam Airlines" class="object-contain"
+                    src="Assets/Airlines/vietnam_airlines_logo_6666034ef8.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Emirates" class="object-contain"
+                    src="Assets/Airlines/emirates_logo_e0645eedaf.png" style="width: 16vw; max-width: 16vw;" /></div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Qatar Airways" class="object-contain"
+                    src="Assets/Airlines/qatar_airlines_logo_4b806b7da4.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="British Airways" class="object-contain"
+                    src="Assets/Airlines/british_airways_logo_3782351f99.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Cathay Pacific" class="object-contain"
+                    src="Assets/Airlines/cathay_pacific_logo_cc7b731ac9.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Kenya Airways" class="object-contain"
+                    src="Assets/Airlines/kenya_airways_logo_8b632f0537.png" style="width: 16vw; max-width: 16vw;" />
+                </div>
+                <div
+                  class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
+                  style="width: 16.6667%;"><img alt="Gulf Air" class="object-contain"
+                    src="Assets/Airlines/gulf_air_logo_5281b00d3b.png" style="width: 16vw; max-width: 16vw;" /></div>
+              </div><button aria-label="Previous"
+                class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gold-accent items-center justify-center text-pure-white shadow hover:opacity-90 transition-opacity cursor-pointer"><svg
+                  aria-hidden="true" class="lucide lucide-chevron-left" fill="none" height="18" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m15 18-6-6 6-6"></path>
+                </svg></button><button aria-label="Next"
+                class="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gold-accent flex items-center justify-center text-pure-white shadow hover:opacity-90 transition-opacity cursor-pointer"><svg
+                  aria-hidden="true" class="lucide lucide-chevron-right" fill="none" height="18" stroke="currentColor"
+                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="m9 18 6-6-6-6"></path>
+                </svg></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer id="footer">
+        <div class="wrap max-w-container-max mx-auto">
+          <div class="foot-grid">
+            <div class="foot-col ">
+              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley">
+              <p>At Holiday Trolley, we pride ourselves on being one of the leading travel service providers. We specialize in creating tailored holiday packages designed to turn your dream getaway into reality.</p>
+            </div>
+            <div class="foot-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="#">Home</a></li><li><a href="#about">About</a></li>
+                <li><a href="#packages">Packages</a></li><li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Booking Conditions</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Contact</h4>
+              <ul>
+                <li class="row"><span class="material-symbols-outlined">Location</span><span>100 Avebury Boulevard, Milton Keynes, MK9 1FH</span></li>
+                <li class="row"><span class="material-symbols-outlined">Contact</span><a href="tel:+442081508552">+44 208 150 8552</a></li>
+                <li class="row"><span class="material-symbols-outlined">Mail</span><a href="mailto:info@holidaytrolley.co.uk">info@holidaytrolley.co.uk</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Follow Us</h4>
+              <ul style="margin-bottom:32px">
+                <li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li>
+              </ul>
+              <img class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected">
+            </div>
+          </div>
+          <div class="legal">
+            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no- 218057223.</h5>
+            <p>All the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not apply to all flights. Holiday Trolley will provide you with information on the protection that applies in the case of each flight before you make your booking. If you do not receive an ATOL Certificate, then the booking will not be ATOL protected. Please see our booking conditions for information, or for more information about financial protection and the ATOL Certificate go to: www.caa.co.uk.</p>
+          </div>
+        </div>
+        <div class="botbar">
+          <div class="wrap botbar-in">
+            <p>Copyright &copy; 2026 Holiday Trolley UK. All rights reserved.</p>
+            <div class="pays">
+              <img src="Assets/Payment-Methods.webp" alt="Payment Methods">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+
+  <div class="ht-modal" id="modal-enquiry" style="display:none">
+    <div aria-modal="true"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-x-hidden overflow-y-auto" role="dialog">
+      <div class="absolute inset-0 bg-deep-navy/80 backdrop-blur-md transition-opacity"></div>
+      <div
+        class="relative bg-soft-cream w-full max-w-2xl overflow-hidden shadow-2xl border border-outline-variant/30 animate-scaleUp">
+        <div class="bg-gold-accent h-1.5 w-full"></div><button aria-label="Close form"
+          class="absolute top-4 right-4 p-2 text-deep-navy hover:text-gold-accent transition-colors z-15 cursor-pointer"><svg
+            aria-hidden="true" class="lucide lucide-x" fill="none" height="20" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg></button>
+        <div class="p-8 md:p-10">
+          <div>
+            <div class="mb-6"><span
+                class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block mb-2">Tailor-Made
+                Holiday Curators</span>
+              <h2 class="text-2xl md:text-3xl font-serif text-deep-navy">Begin Your Bespoke Travel Enquiry</h2>
+              <p class="text-sm text-on-surface-variant/80 mt-1 font-light">Provide your preferred details below, and an
+                expert travel planner will hand-craft your complete private itinerary.</p>
+            </div>
+            <div class="flex items-center gap-2 mb-8 pr-12">
+              <div class="h-1 flex-1 transition-all duration-300 bg-gold-accent"></div>
+              <div class="h-1 flex-1 transition-all duration-300 bg-slate-200"></div>
+              <div class="h-1 flex-1 transition-all duration-300 bg-slate-200"></div>
+            </div>
+            <form class="space-y-6">
+              <div class="space-y-5 animate-fadeIn">
+                <div><label
+                    class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider block mb-2">Desired
+                    Destination *</label><input
+                    class="w-full bg-pure-white/80 border-b border-outline-variant p-3 focus:outline-none focus:border-gold-accent transition-colors text-deep-navy"
+                    name="destination" placeholder="e.g. Maldives, Costa Rica, Vietnam..." required="" type="text"
+                    value="" /></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div><label
+                      class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider block mb-2">Travel
+                      Vibe &amp; Style</label><select
+                      class="w-full bg-pure-white/80 border-b border-outline-variant p-3 focus:outline-none focus:border-gold-accent transition-colors text-deep-navy"
+                      name="travelStyle">
+                      <option value="Relaxed Luxury">Relaxed Luxury (Beaches &amp; Pampering)</option>
+                      <option value="Adventure &amp; Culture">Adventure &amp; Culture (Immersive Escapes)</option>
+                      <option value="Bespoke Private">Bespoke Private (Seclusion &amp; Luxury Villa)</option>
+                      <option value="Multi-Centre">Combination / Multi-Centre</option>
+                    </select></div>
+                  <div><label
+                      class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider block mb-2">Duration</label><select
+                      class="w-full bg-pure-white/80 border-b border-outline-variant p-3 focus:outline-none focus:border-gold-accent transition-colors text-deep-navy"
+                      name="duration">
+                      <option value="7 Nights">7 Nights</option>
+                      <option value="10 Nights">10 Nights</option>
+                      <option value="14 Nights">14 Nights</option>
+                      <option value="Bespoke Choice">Bespoke / Longer Travel</option>
+                    </select></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center pt-4 border-t border-slate-200"><span></span><button
+                  class="bg-deep-navy text-pure-white px-6 py-2.5 font-sans text-xs tracking-wider uppercase font-bold hover:bg-gold-accent-hover hover:bg-gold-accent transition-all cursor-pointer"
+                  type="button">Continue</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ht-modal" id="modal-contact" style="display:none">
+    <div aria-modal="true"
+      class="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-x-hidden overflow-y-auto" role="dialog">
+      <div class="absolute inset-0 bg-deep-navy/85 backdrop-blur-md transition-opacity"></div>
+      <div
+        class="relative bg-soft-cream w-full max-w-2xl overflow-hidden shadow-2xl border border-outline-variant/30 animate-scaleUp">
+        <div class="bg-gold-accent h-1.5 w-full"></div><button
+          class="absolute top-4 right-4 p-2 text-deep-navy hover:text-gold-accent transition-colors z-20 cursor-pointer"><svg
+            aria-hidden="true" class="lucide lucide-x" fill="none" height="20" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg></button>
+        <div class="p-8 md:p-10">
+          <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+            <div class="md:col-span-2 space-y-6">
+              <div><span
+                  class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block mb-2">Luxe
+                  Headquarters</span>
+                <h2 class="text-xl md:text-2xl font-serif text-deep-navy font-medium">London Office</h2>
+              </div>
+              <div class="space-y-4 text-xs text-on-surface-variant leading-relaxed font-light">
+                <div class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                    class="lucide lucide-map-pin text-gold-accent shrink-0 mt-0.5" fill="none" height="16"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                    </path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                  <p>12 Stephen Mews<br />London, W1T 1AH<br />United Kingdom</p>
+                </div>
+                <div class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                    class="lucide lucide-clock text-gold-accent shrink-0 mt-0.5" fill="none" height="16"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6v6l4 2"></path>
+                    <circle cx="12" cy="12" r="10"></circle>
+                  </svg>
+                  <p>Open Daily<br />9AM – 11PM GMT</p>
+                </div>
+                <div class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                    class="lucide lucide-phone text-gold-accent shrink-0 mt-0.5" fill="none" height="16"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                    </path>
+                  </svg>
+                  <div>
+                    <p class="font-bold text-deep-navy hover:text-gold-accent tracking-wide">03332 422 222</p><span
+                      class="opacity-70 text-[0.625rem] uppercase">Corporate Office</span>
+                  </div>
+                </div>
+                <div class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                    class="lucide lucide-mail text-gold-accent shrink-0 mt-0.5" fill="none" height="16"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                    <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                  </svg><a class="hover:text-gold-accent transition-colors"
+                    href="mailto:info@holidaytrolley.co.uk">Info@holidaytrolley.co.uk</a></div>
+              </div>
+              <div class="bg-pure-white border border-outline-variant/20 p-4 space-y-2">
+                <h4 class="text-[0.625rem] font-bold text-deep-navy uppercase tracking-wider">Official Registrations
+                </h4>
+                <p class="text-[0.625rem] text-on-surface-variant/80 leading-relaxed font-sans">Holiday Trolley Ltd (No.
+                  08234384). ATOL Protected 3517. Secure banking guarantees apply.</p>
+              </div>
+            </div>
+            <form
+              class="md:col-span-3 space-y-4 border-t md:border-t-0 md:border-l border-slate-200 md:pl-6 pt-6 md:pt-0">
+              <h3 class="text-sm font-semibold text-deep-navy uppercase tracking-wider mb-2">Enquire Directly</h3>
+              <div class="space-y-3"><input
+                  class="w-full bg-pure-white/85 border-b border-outline-variant p-2.5 text-xs text-deep-navy focus:outline-none focus:border-gold-accent"
+                  name="name" placeholder="Your Full Name *" required="" type="text" value="" /><input
+                  class="w-full bg-pure-white/85 border-b border-outline-variant p-2.5 text-xs text-deep-navy focus:outline-none focus:border-gold-accent"
+                  name="email" placeholder="Your Email Address *" required="" type="email" value="" /><input
+                  class="w-full bg-pure-white/85 border-b border-outline-variant p-2.5 text-xs text-deep-navy focus:outline-none focus:border-gold-accent"
+                  name="phone" placeholder="Preferred Contact Phone *" required="" type="tel" value="" /><select
+                  class="w-full bg-pure-white/85 border-b border-outline-variant p-2.5 text-xs text-deep-navy focus:outline-none focus:border-gold-accent"
+                  name="subject">
+                  <option value="General Enquiries">General Enquiries Available</option>
+                  <option value="Booking Alteration">Booking Alteration Help</option>
+                  <option value="Sustainability (Tree Planting)">Sustainability Question</option>
+                  <option value="Careers / Press">Careers &amp; Media Enquiries</option>
+                </select><textarea
+                  class="w-full bg-pure-white/85 border-b border-outline-variant p-2.5 text-xs text-deep-navy focus:outline-none focus:border-gold-accent text-sm font-light"
+                  name="message" placeholder="Specify details, trip plans, or notes..." required="" rows="4"></textarea>
+              </div><button
+                class="w-full bg-gold-accent text-pure-white text-center py-3 font-sans text-xs tracking-wider uppercase font-extrabold hover:bg-gold-hover transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm"
+                type="submit">Send Client Message <svg aria-hidden="true" class="lucide lucide-send" fill="none"
+                  height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                  </path>
+                  <path d="m21.854 2.147-10.94 10.939"></path>
+                </svg></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ht-modal" id="modal-detail" style="display:none">
+    <div aria-modal="true" class="fixed inset-0 z-50 overflow-y-auto flex items-center justify-center p-4 md:p-10"
+      role="dialog">
+      <div class="absolute inset-0 bg-deep-navy/80 backdrop-blur-md transition-opacity"></div>
+      <div
+        class="relative bg-soft-cream w-full max-w-4xl overflow-hidden shadow-2xl border border-outline-variant/30 animate-scaleUp max-h-[90vh] flex flex-col">
+        <div class="bg-gold-accent h-1.5 w-full shrink-0"></div><button aria-label="Close details"
+          class="absolute top-4 right-4 bg-pure-white/90 p-2 text-deep-navy hover:text-gold-accent transition-colors z-30 shadow-md cursor-pointer"><svg
+            aria-hidden="true" class="lucide lucide-x" fill="none" height="18" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg></button>
+        <div class="overflow-y-auto flex-1">
+          <div class="relative h-60 md:h-72 w-full"><img alt="Turkish Treasures &amp; Maldives Serenity Retreat"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpzmm7Hvq65Z-Iq_6JnbOjWMwJ2xH1kRccSteW88ItMy2rD_FtjXG6kQwIe10EGXk0zJ22hXNRLC6qMTIFmPcS52lNSrRixewpiBFP2KdY04eOKnKsOWqHh8GYnPGoSg-O3NaHwZ6MrtylzTR4PSI54AZYF045h1PqUiFu8-drNXzUpHiqWmBB_SH2C3BuKtvvQB1JWk7rgB1J2SIN7_m4r82bnhixD99FW1SvV4Xv4GtwD-C1I1b_acS2LSzg9idX-mB5lP5Vlk" />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-deep-navy/90 via-deep-navy/40 to-black/10 flex flex-col justify-end p-6 md:p-8">
+              <span
+                class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest bg-deep-navy/85 px-2 py-1 rounded-sm w-fit mb-3">10
+                Nights • Maldives</span>
+              <h1 class="text-xl md:text-3xl font-serif text-pure-white leading-tight font-medium">Turkish Treasures
+                &amp; Maldives Serenity Retreat</h1>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 p-6 md:p-8">
+            <div class="lg:col-span-2 space-y-8">
+              <div>
+                <h2
+                  class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4 flex items-center gap-1.5">
+                  <svg aria-hidden="true" class="lucide lucide-award text-gold-accent" fill="none" height="14"
+                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                    </path>
+                    <circle cx="12" cy="8" r="6"></circle>
+                  </svg> Journey Curated Highlights</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-on-surface-variant">
+                  <div class="flex gap-2.5 items-start"><span
+                      class="text-gold-accent shrink-0 text-lg leading-none mt-0.5">•</span><span>Private overwater
+                      villa stay in the Maldives with direct lagoon access</span></div>
+                  <div class="flex gap-2.5 items-start"><span
+                      class="text-gold-accent shrink-0 text-lg leading-none mt-0.5">•</span><span>Curated private tour
+                      of historic Istanbul highlights</span></div>
+                  <div class="flex gap-2.5 items-start"><span
+                      class="text-gold-accent shrink-0 text-lg leading-none mt-0.5">•</span><span>Bespoke spa therapies
+                      and couples massages, hand-selected</span></div>
+                  <div class="flex gap-2.5 items-start"><span
+                      class="text-gold-accent shrink-0 text-lg leading-none mt-0.5">•</span><span>Exquisite,
+                      award-winning sunset dinners over the water</span></div>
+                </div>
+              </div>
+              <div class="space-y-6">
+                <h2
+                  class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-6 flex items-center gap-1.5">
+                  <svg aria-hidden="true" class="lucide lucide-text-align-justify text-gold-accent" fill="none"
+                    height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 5h18"></path>
+                    <path d="M3 12h18"></path>
+                    <path d="M3 19h18"></path>
+                  </svg> Day-by-Day Private Itinerary</h2>
+                <div class="relative pl-6 space-y-8">
+                  <div class="absolute left-1.5 top-1 bottom-1 w-0.5 bg-gold-accent"></div>
+                  <div class="relative group">
+                    <div
+                      class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-soft-cream rounded-full border-2 border-gold-accent flex items-center justify-center group-hover:bg-gold-accent transition-colors">
+                    </div>
+                    <div class="space-y-1"><span
+                        class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">Day
+                        1</span>
+                      <h3 class="font-serif text-base text-deep-navy font-medium">Arrival in Istanbul</h3>
+                      <p class="text-sm text-on-surface-variant leading-relaxed font-light">Begin your journey with a
+                        private luxury transfer to your classic boutique suite. Indulge in an exclusive private cruise
+                        on the magnificent Bosphorus Strait.</p>
+                    </div>
+                  </div>
+                  <div class="relative group">
+                    <div
+                      class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-soft-cream rounded-full border-2 border-gold-accent flex items-center justify-center group-hover:bg-gold-accent transition-colors">
+                    </div>
+                    <div class="space-y-1"><span
+                        class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">Day
+                        3</span>
+                      <h3 class="font-serif text-base text-deep-navy font-medium">Sultans &amp; Hagia Sophia</h3>
+                      <p class="text-sm text-on-surface-variant leading-relaxed font-light">Explore historic Istanbul
+                        with an expert private historian guide, gaining special skip-the-line entry to Topkapi Palace
+                        and Hagia Sophia.</p>
+                    </div>
+                  </div>
+                  <div class="relative group">
+                    <div
+                      class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-soft-cream rounded-full border-2 border-gold-accent flex items-center justify-center group-hover:bg-gold-accent transition-colors">
+                    </div>
+                    <div class="space-y-1"><span
+                        class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">Day
+                        5</span>
+                      <h3 class="font-serif text-base text-deep-navy font-medium">Escape to the Maldives</h3>
+                      <p class="text-sm text-on-surface-variant leading-relaxed font-light">Fly to Malé and board a
+                        private luxury speedboat to your serene luxury island resort. Settle into a gorgeous overwater
+                        villa.</p>
+                    </div>
+                  </div>
+                  <div class="relative group">
+                    <div
+                      class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-soft-cream rounded-full border-2 border-gold-accent flex items-center justify-center group-hover:bg-gold-accent transition-colors">
+                    </div>
+                    <div class="space-y-1"><span
+                        class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">Day
+                        8</span>
+                      <h3 class="font-serif text-base text-deep-navy font-medium">Unwind &amp; Spa Serenity</h3>
+                      <p class="text-sm text-on-surface-variant leading-relaxed font-light">Take part in personalized
+                        yoga sessions followed by a signature couples therapy session at the award-winning marine spa
+                        center.</p>
+                    </div>
+                  </div>
+                  <div class="relative group">
+                    <div
+                      class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-soft-cream rounded-full border-2 border-gold-accent flex items-center justify-center group-hover:bg-gold-accent transition-colors">
+                    </div>
+                    <div class="space-y-1"><span
+                        class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">Day
+                        10</span>
+                      <h3 class="font-serif text-base text-deep-navy font-medium">Bespoke Sunset Dinner</h3>
+                      <p class="text-sm text-on-surface-variant leading-relaxed font-light">Conclude your holiday with
+                        an unforgettable private dining setup on a private sandbank under the tropical stars.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="space-y-6 relative h-fit lg:sticky lg:top-4">
+              <div class="bg-pure-white border border-outline-variant/30 p-6 card-shadow space-y-6">
+                <div class="pb-4 border-b border-outline-variant/50 space-y-2"><span
+                    class="text-[0.625rem] text-on-surface-variant/70 uppercase tracking-widest font-semibold block">Starting
+                    private rate</span>
+                  <div class="flex items-baseline gap-2"><span
+                      class="text-2xl font-serif font-bold text-deep-navy">£2,499</span><span
+                      class="text-xs text-on-surface-variant font-medium">per guest</span></div><span
+                    class="text-xs text-red-600 font-bold block pt-1">Includes exclusive £750 discount</span>
+                </div>
+                <div class="space-y-4"><span
+                    class="text-[0.625rem] text-on-surface-variant font-semibold uppercase tracking-widest block">Elite
+                    Inclusions Included</span>
+                  <ul class="space-y-3 text-xs text-on-surface-variant leading-relaxed">
+                    <li class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                        class="lucide lucide-circle-check-big text-gold-accent shrink-0 mt-0.5" fill="none" height="14"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg><span>Return international business or premium flights protected under ATOL</span></li>
+                    <li class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                        class="lucide lucide-circle-check-big text-gold-accent shrink-0 mt-0.5" fill="none" height="14"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg><span>All airport speed-boat transfers and local private transfers</span></li>
+                    <li class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                        class="lucide lucide-circle-check-big text-gold-accent shrink-0 mt-0.5" fill="none" height="14"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg><span>5-Star Luxury Overwater Suite with premium half-board dining</span></li>
+                    <li class="flex gap-2.5 items-start"><svg aria-hidden="true"
+                        class="lucide lucide-circle-check-big text-gold-accent shrink-0 mt-0.5" fill="none" height="14"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg><span>Complimentary champagne on arrival and private concierge assistance</span></li>
+                  </ul>
+                </div>
+                <div class="bg-soft-cream p-3 rounded-xs flex items-start gap-2.5 border border-outline-variant/20"><svg
+                    aria-hidden="true" class="lucide lucide-circle-check-big text-emerald-500 shrink-0 mt-0.5"
+                    fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                    <path d="m9 11 3 3L22 4"></path>
+                  </svg>
+                  <p class="text-[0.625rem] text-on-surface-variant leading-relaxed font-medium">100% Dual protected
+                    under standard <strong>ATOL (Licence 3517)</strong> &amp; <strong>ABTA</strong>. Your deposits and
+                    flight safety are guaranteed.</p>
+                </div>
+                <div class="space-y-2 pt-2"><button
+                    class="w-full bg-gold-accent text-pure-white text-center py-3 font-sans text-xs tracking-wider uppercase font-extrabold hover:bg-gold-hover transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">Enquire
+                    on this Journey <svg aria-hidden="true" class="lucide lucide-send" fill="none" height="11"
+                      stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                      </path>
+                      <path d="m21.854 2.147-10.94 10.939"></path>
+                    </svg></button><button
+                    class="w-full border border-outline-variant text-[0.6875rem] font-sans tracking-wide uppercase font-semibold hover:border-gold-accent py-2.5 text-deep-navy transition-all flex items-center justify-center gap-1.5 cursor-pointer"><svg
+                      aria-hidden="true" class="lucide lucide-heart" fill="none" height="12" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                      </path>
+                    </svg>Add to Comparative Shortlist</button></div>
+              </div>
+              <div class="text-[0.625rem] text-on-surface-variant/80 text-center leading-relaxed px-2">* All itineraries
+                are 100% tailor-made and custom altered free of charge by our UK travel experts during compilation.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ht-modal" id="modal-shortlist" style="display:none">
+    <div aria-modal="true" class="fixed inset-0 z-50 overflow-hidden" role="dialog">
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-xs transition-opacity"></div>
+      <div class="absolute inset-y-0 right-0 max-w-full flex pl-10">
+        <div class="w-screen max-w-md bg-pure-white h-full shadow-2xl flex flex-col animate-fadeIn">
+          <div class="px-6 py-5 border-b border-outline-variant flex items-center justify-between">
+            <div class="flex items-center gap-2"><svg aria-hidden="true"
+                class="lucide lucide-heart text-gold-accent fill-gold-accent" fill="none" height="20"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5">
+                </path>
+              </svg>
+              <h2 class="text-xl font-serif text-deep-navy">My Shortlist</h2><span
+                class="bg-soft-cream text-deep-navy text-xs font-semibold px-2.5 py-0.5 rounded-full">1</span>
+            </div><button
+              class="p-2 text-on-surface-variant hover:text-gold-accent transition-colors cursor-pointer"><svg
+                aria-hidden="true" class="lucide lucide-x" fill="none" height="20" stroke="currentColor"
+                stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6 6 18"></path>
+                <path d="m6 6 12 12"></path>
+              </svg></button>
+          </div>
+          <div class="flex-1 overflow-y-auto p-6 space-y-4">
+            <div class="space-y-4">
+              <div class="flex justify-between items-center pb-2"><span
+                  class="text-xs font-semibold text-on-surface-variant uppercase tracking-wider">Saved
+                  Packages</span><button class="text-xs text-red-600 hover:text-red-700 font-semibold">Clear
+                  All</button></div>
+              <div
+                class="flex gap-4 p-3 bg-soft-cream border border-outline-variant/40 hover:border-gold-accent/40 transition-all rounded">
+                <div class="w-20 h-20 shrink-0 overflow-hidden relative rounded-xs bg-slate-100"><img
+                    alt="Turkish Treasures &amp; Maldives Serenity Retreat" class="w-full h-full object-cover"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpzmm7Hvq65Z-Iq_6JnbOjWMwJ2xH1kRccSteW88ItMy2rD_FtjXG6kQwIe10EGXk0zJ22hXNRLC6qMTIFmPcS52lNSrRixewpiBFP2KdY04eOKnKsOWqHh8GYnPGoSg-O3NaHwZ6MrtylzTR4PSI54AZYF045h1PqUiFu8-drNXzUpHiqWmBB_SH2C3BuKtvvQB1JWk7rgB1J2SIN7_m4r82bnhixD99FW1SvV4Xv4GtwD-C1I1b_acS2LSzg9idX-mB5lP5Vlk" />
+                </div>
+                <div class="flex-1 flex flex-col justify-between">
+                  <div><span class="text-[9px] font-semibold text-gold-accent uppercase tracking-widest block">10 Nights
+                      • Maldives</span>
+                    <h4 class="font-serif text-sm text-deep-navy line-clamp-1 hover:text-gold-accent transition-colors">
+                      Turkish Treasures &amp; Maldives Serenity Retreat</h4>
+                  </div>
+                  <div class="flex justify-between items-end">
+                    <div><span class="text-[0.625rem] text-on-surface-variant block">Estimate from</span><span
+                        class="font-bold text-sm text-deep-navy">£2,499</span></div>
+                    <div class="flex gap-2"><button
+                        class="bg-gold-accent text-pure-white p-1.5 hover:bg-gold-hover transition-colors"
+                        title="Enquire specifically about this travel plan"><svg aria-hidden="true"
+                          class="lucide lucide-send" fill="none" height="12" stroke="currentColor"
+                          stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                          </path>
+                          <path d="m21.854 2.147-10.94 10.939"></path>
+                        </svg></button><button
+                        class="text-xs text-on-surface-variant hover:text-red-600 font-medium px-1">Remove</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-6 border-t border-outline-variant bg-soft-cream/50 space-y-4">
+            <div class="flex justify-between items-center text-sm"><span
+                class="font-sans text-on-surface-variant">Selected Travel Plans (1)</span><span
+                class="font-bold text-deep-navy">From £2,499 total</span></div><button
+              class="w-full bg-deep-navy text-pure-white text-center py-3.5 font-sans text-xs font-bold uppercase tracking-widest hover:bg-gold-accent hover:text-deep-navy transition-colors flex items-center justify-center gap-2">Assemble
+              Combined Enquiry <svg aria-hidden="true" class="lucide lucide-arrow-right" fill="none" height="14"
+                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                viewbox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path>
+              </svg></button>
+            <p class="text-[0.625rem] text-center text-on-surface-variant font-medium">Our expert UK agents will craft a
+              bespoke multicentre vacation linking your chosen destinations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
