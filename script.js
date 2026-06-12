@@ -8,6 +8,20 @@
     var $ = function (sel, ctx) { return (ctx || document).querySelector(sel); };
     var $$ = function (sel, ctx) { return Array.prototype.slice.call((ctx || document).querySelectorAll(sel)); };
 
+    /* ---------- Clean pretty URLs ---------- */
+    (function cleanPrettyUrl() {
+      if (!window.history || !window.history.replaceState) return;
+      var path = window.location.pathname;
+      if (!/\.html$/i.test(path)) return;
+
+      var cleanPath = path.replace(/\/index\.html$/i, '/').replace(/\.html$/i, '');
+      try {
+        window.history.replaceState(null, document.title, cleanPath + window.location.search + window.location.hash);
+      } catch (e) {
+        // Some local file contexts block history updates; the hosted site will still clean the URL.
+      }
+    })();
+
     /* ---------- Hero slider ---------- */
     (function heroSlider() {
       var hero = $('[data-hero]');
