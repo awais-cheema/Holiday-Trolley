@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Assets/favicon.png" />
+  <title>Destinations — Holiday Trolley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen flex flex-col justify-between bg-surface selection:bg-gold-accent selection:text-deep-navy">
+
+      <!-- Top announcement bar -->
+      <div class="w-full bg-gold-accent/80 py-2.5 px-4 text-center shrink-0">
+        <p class="text-[#12232F] font-bold text-[0.9vw] tracking-wide">Book with confidence. Call today — we'll answer
+          in under a minute.</p>
+      </div>
+
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 transition-all duration-300 border-b py-[3vh] bg-pure-white shadow-sm py-5 border-outline-variant"
+        id="main-header">
+        <div
+          class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <a class="flex items-center" href="index.html"><img alt="Holiday Trolley"
+              class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" /></a>
+          <nav class="hidden lg:flex gap-12 items-center">
+            <a href="destinations.html"
+              class="text-gold-accent font-semibold relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-gold-accent font-sans text-[0.8vw] tracking-widest uppercase">Destinations</a>
+            <a href="#"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Tours</a>
+            <a href="about.html"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">About</a>
+            <a href="contact.html"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Contact</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <div class="hidden xl:flex items-center"><a class="flex items-center gap-3 group"
+                href="tel:03332422222"><svg aria-hidden="true"
+                  class="lucide lucide-phone-call text-[#EE9131] group-hover:text-[#EE9131] transition-colors shrink-0"
+                  fill="none" height="36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" viewbox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2a9 9 0 0 1 9 9"></path>
+                  <path d="M13 6a5 5 0 0 1 5 5"></path>
+                  <path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                  </path>
+                </svg>
+                <div class="flex flex-col leading-tight"><span class="text-slate-400 text-[0.7vw]">9am -
+                    11pm</span><span
+                    class="text-deep-navy font-extrabold text-[1vw] tracking-wide group-hover:text-gold-accent transition-colors">0203
+                    023 7776</span></div>
+              </a></div>
+            <div class="flex gap-2 ml-[1vw]"><button
+                class="bg-gold-accent text-pure-white px-8 py-3 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm">Enquire
+                Now</button></div><button aria-label="Open navigation menu"
+              class="lg:hidden p-2 text-deep-navy hover:text-gold-accent transition-colors"><svg aria-hidden="true"
+                class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 19h16"></path>
+              </svg></button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          class="lg:hidden absolute top-full left-0 w-full bg-pure-white border-b border-outline-variant shadow-xl p-6 transition-all duration-300 animate-fadeIn"
+          id="mobile-menu" style="display:none">
+          <div class="flex flex-col gap-4">
+            <a href="destinations.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Destinations</a>
+            <a href="#"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Tours</a>
+            <a href="about.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">About</a>
+            <a href="contact.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Contact</a>
+            <div class="flex flex-col gap-3 pt-4"><a
+                class="flex items-center gap-2 text-deep-navy font-bold py-2 justify-center border border-slate-200"
+                href="tel:03332422222">Call 03332 422 222</a><button
+                class="w-full bg-gold-accent text-pure-white py-3 font-sans text-xs tracking-widest uppercase font-bold text-center">Start
+                Bespoke Enquiry</button></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="relative bg-deep-navy overflow-hidden" style="height: 58vh; min-height: 380px;">
+        <img src="Assets/Hero Imgs/Kenya-Hero.jpg" alt="Destinations"
+          class="absolute inset-0 w-full h-full object-cover select-none"
+          style="filter: brightness(0.45);" />
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+          <div class="max-w-4xl space-y-6">
+            <div class="flex items-center justify-center gap-3">
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+              <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Handpicked Experiences</span>
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+            </div>
+            <h1
+              class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+              style="text-shadow: rgba(0,0,0,0.45) 0px 2px 24px;">Explore Our Destinations</h1>
+            <p class="text-[1.4vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">From
+              Maldivian lagoons to African savannas — discover the world's finest escapes, curated exclusively for
+              you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Filter tabs -->
+      <div class="bg-pure-white border-b border-outline-variant sticky z-40" style="top: 0;">
+        <div
+          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex items-center gap-8 overflow-x-auto py-4"
+          style="scrollbar-width: none;" id="dest-filters">
+          <button data-filter="all"
+            class="dest-filter-btn shrink-0 text-gold-accent border-b-2 border-gold-accent font-sans text-[0.75vw] tracking-widest uppercase font-semibold pb-1 transition-colors duration-300">All</button>
+          <button data-filter="indian-ocean"
+            class="dest-filter-btn shrink-0 text-deep-navy hover:text-gold-accent border-b-2 border-transparent font-sans text-[0.75vw] tracking-widest uppercase font-semibold pb-1 transition-colors duration-300">Indian
+            Ocean</button>
+          <button data-filter="east-africa"
+            class="dest-filter-btn shrink-0 text-deep-navy hover:text-gold-accent border-b-2 border-transparent font-sans text-[0.75vw] tracking-widest uppercase font-semibold pb-1 transition-colors duration-300">East
+            Africa</button>
+          <button data-filter="southeast-asia"
+            class="dest-filter-btn shrink-0 text-deep-navy hover:text-gold-accent border-b-2 border-transparent font-sans text-[0.75vw] tracking-widest uppercase font-semibold pb-1 transition-colors duration-300">Southeast
+            Asia</button>
+        </div>
+      </div>
+
+      <!-- Destinations Grid -->
+      <section class="py-20 bg-soft-cream" id="destinations-grid">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
+          <div class="space-y-3">
+            <span class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Explore the
+              World</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Our Destinations</h2>
+            <p class="text-[0.9vw] text-on-surface-variant max-w-xl font-light leading-relaxed">Every destination we
+              offer is personally vetted by our travel experts — ensuring luxury, authenticity, and unforgettable
+              moments at every turn.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="dest-grid">
+
+            <!-- Maldives -->
+            <div class="dest-card relative overflow-hidden cursor-pointer group shadow-md rounded-2xl" data-region="indian-ocean" style="height:420px;">
+              <img src="Assets/Destinations/Maldives.avif" alt="Maldives"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span
+                  class="inline-flex bg-gold-accent text-black font-bold px-3 py-1 rounded-full text-[0.75vw] tracking-wide uppercase">Indian
+                  Ocean</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
+                <h3 class="font-serif text-pure-white font-medium leading-snug" style="font-size: 1.6vw;">Maldives</h3>
+                <p class="text-white/75 leading-relaxed" style="font-size: 0.85vw;">Overwater villas, coral reefs and
+                  endless turquoise lagoons in the heart of the Indian Ocean.</p>
+                <div class="flex gap-2 flex-wrap pt-1">
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Overwater
+                    Villas</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Honeymoon</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Snorkelling</span>
+                </div>
+                <button
+                  class="mt-2 bg-gold-accent text-pure-white px-6 py-2 font-sans tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm inline-flex items-center gap-2 text-[0.75vw]">
+                  Explore Packages
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Bali -->
+            <div class="dest-card relative overflow-hidden cursor-pointer group shadow-md rounded-2xl" data-region="southeast-asia" style="height:420px;">
+              <img src="Assets/Destinations/Bali.jpg" alt="Bali, Indonesia"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span
+                  class="inline-flex bg-gold-accent text-black font-bold px-3 py-1 rounded-full text-[0.75vw] tracking-wide uppercase">Southeast
+                  Asia</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
+                <h3 class="font-serif text-pure-white font-medium leading-snug" style="font-size: 1.6vw;">Bali,
+                  Indonesia</h3>
+                <p class="text-white/75 leading-relaxed" style="font-size: 0.85vw;">Spiritual temples, lush rice
+                  terraces and vibrant arts culture on the Island of the Gods.</p>
+                <div class="flex gap-2 flex-wrap pt-1">
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Culture</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Wellness</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Adventure</span>
+                </div>
+                <button
+                  class="mt-2 bg-gold-accent text-pure-white px-6 py-2 font-sans tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm inline-flex items-center gap-2 text-[0.75vw]">
+                  Explore Packages
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Thailand -->
+            <div class="dest-card relative overflow-hidden cursor-pointer group shadow-md rounded-2xl" data-region="southeast-asia" style="height:420px;">
+              <img src="Assets/Destinations/Thailand.jpg" alt="Thailand"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span
+                  class="inline-flex bg-gold-accent text-black font-bold px-3 py-1 rounded-full text-[0.75vw] tracking-wide uppercase">Southeast
+                  Asia</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
+                <h3 class="font-serif text-pure-white font-medium leading-snug" style="font-size: 1.6vw;">Thailand</h3>
+                <p class="text-white/75 leading-relaxed" style="font-size: 0.85vw;">Golden temples, turquoise beaches
+                  and world-class cuisine across the Land of Smiles.</p>
+                <div class="flex gap-2 flex-wrap pt-1">
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Beach</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Family</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Luxury</span>
+                </div>
+                <button
+                  class="mt-2 bg-gold-accent text-pure-white px-6 py-2 font-sans tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm inline-flex items-center gap-2 text-[0.75vw]">
+                  Explore Packages
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Kenya -->
+            <div class="dest-card relative overflow-hidden cursor-pointer group shadow-md rounded-2xl" data-region="east-africa" style="height:420px;">
+              <img src="Assets/Destinations/Kenya-1.jpg" alt="Kenya"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span
+                  class="inline-flex bg-gold-accent text-black font-bold px-3 py-1 rounded-full text-[0.75vw] tracking-wide uppercase">East
+                  Africa</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
+                <h3 class="font-serif text-pure-white font-medium leading-snug" style="font-size: 1.6vw;">Kenya</h3>
+                <p class="text-white/75 leading-relaxed" style="font-size: 0.85vw;">The ultimate Big Five safari
+                  destination — the Masai Mara, Great Migration and breathtaking landscapes.</p>
+                <div class="flex gap-2 flex-wrap pt-1">
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Safari</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Wildlife</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Luxury
+                    Camp</span>
+                </div>
+                <button
+                  class="mt-2 bg-gold-accent text-pure-white px-6 py-2 font-sans tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm inline-flex items-center gap-2 text-[0.75vw]">
+                  Explore Packages
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Tanzania -->
+            <div class="dest-card relative overflow-hidden cursor-pointer group shadow-md rounded-2xl" data-region="east-africa" style="height:420px;">
+              <img src="Assets/Destinations/Tanzania.jpg" alt="Tanzania"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span
+                  class="inline-flex bg-gold-accent text-black font-bold px-3 py-1 rounded-full text-[0.75vw] tracking-wide uppercase">East
+                  Africa</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
+                <h3 class="font-serif text-pure-white font-medium leading-snug" style="font-size: 1.6vw;">Tanzania</h3>
+                <p class="text-white/75 leading-relaxed" style="font-size: 0.85vw;">Serengeti plains, Ngorongoro
+                  Crater and the spice island of Zanzibar — Africa at its finest.</p>
+                <div class="flex gap-2 flex-wrap pt-1">
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Safari</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Beach</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Zanzibar</span>
+                </div>
+                <button
+                  class="mt-2 bg-gold-accent text-pure-white px-6 py-2 font-sans tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm inline-flex items-center gap-2 text-[0.75vw]">
+                  Explore Packages
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Vietnam -->
+            <div class="dest-card relative overflow-hidden cursor-pointer group shadow-md rounded-2xl" data-region="southeast-asia" style="height:420px;">
+              <img src="Assets/Destinations/Veitnam.jpg" alt="Vietnam"
+                class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 z-10">
+                <span
+                  class="inline-flex bg-gold-accent text-black font-bold px-3 py-1 rounded-full text-[0.75vw] tracking-wide uppercase">Southeast
+                  Asia</span>
+              </div>
+              <div class="absolute bottom-0 left-0 right-0 p-6 z-10 space-y-2">
+                <h3 class="font-serif text-pure-white font-medium leading-snug" style="font-size: 1.6vw;">Vietnam</h3>
+                <p class="text-white/75 leading-relaxed" style="font-size: 0.85vw;">Ancient lantern-lit towns, emerald
+                  Hạ Long Bay and a rich tapestry of culture and cuisine.</p>
+                <div class="flex gap-2 flex-wrap pt-1">
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Culture</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Adventure</span>
+                  <span
+                    class="bg-pure-white/10 text-white/90 px-2 py-1 font-sans uppercase tracking-wide text-[0.65vw]">Foodie</span>
+                </div>
+                <button
+                  class="mt-2 bg-gold-accent text-pure-white px-6 py-2 font-sans tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm inline-flex items-center gap-2 text-[0.75vw]">
+                  Explore Packages
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Banner -->
+      <section class="py-20 bg-deep-navy text-center">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-6">
+          <div class="flex items-center justify-center gap-3">
+            <span class="block w-10 h-px bg-gold-accent/70"></span>
+            <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Bespoke Travel</span>
+            <span class="block w-10 h-px bg-gold-accent/70"></span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-serif text-pure-white font-medium">Can't find your dream destination?</h2>
+          <p class="text-[1vw] text-pure-white/70 max-w-xl mx-auto font-light leading-relaxed">Our expert travel
+            consultants specialise in crafting bespoke itineraries to any destination in the world. Just ask.</p>
+          <button
+            class="bg-gold-accent text-pure-white px-10 py-4 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg">Start
+            a Bespoke Enquiry</button>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="wrap max-w-container-max mx-auto">
+          <div class="foot-grid">
+            <div class="foot-col">
+              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley">
+              <p>At Holiday Trolley, we pride ourselves on being one of the leading travel service providers. We
+                specialize in creating tailored holiday packages designed to turn your dream getaway into reality.</p>
+            </div>
+            <div class="foot-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Booking Conditions</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Contact</h4>
+              <ul>
+                <li class="row"><span>Location</span><span>100 Avebury Boulevard, Milton Keynes, MK9 1FH</span></li>
+                <li class="row"><span>Phone</span><a href="tel:03332422222">03332 422 222</a></li>
+                <li class="row"><span>Email</span><a
+                    href="mailto:info@holidaytrolley.co.uk">info@holidaytrolley.co.uk</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Follow Us</h4>
+              <ul style="margin-bottom:32px">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ul>
+              <img class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected">
+            </div>
+          </div>
+          <div class="legal">
+            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no-
+              218057223.</h5>
+            <p>All the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you
+              pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything
+              you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but
+              all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the
+              flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not
+              apply to all flights. Holiday Trolley will provide you with information on the protection that applies in
+              the case of each flight before you make your booking. If you do not receive an ATOL Certificate, then the
+              booking will not be ATOL protected. Please see our booking conditions for information, or for more
+              information about financial protection and the ATOL Certificate go to: www.caa.co.uk.</p>
+          </div>
+        </div>
+        <div class="botbar">
+          <div class="wrap botbar-in">
+            <p>Copyright &copy; 2026 Holiday Trolley UK. All rights reserved.</p>
+            <div class="pays">
+              <img src="Assets/Payment-Methods.webp" alt="Payment Methods">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('[aria-label="Open navigation menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+
+    // Region filter tabs
+    const filterBtns = document.querySelectorAll('.dest-filter-btn');
+    const destCards = document.querySelectorAll('.dest-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active tab styles
+        filterBtns.forEach(b => {
+          b.classList.remove('text-gold-accent', 'border-gold-accent');
+          b.classList.add('text-deep-navy', 'border-transparent');
+        });
+        btn.classList.add('text-gold-accent', 'border-gold-accent');
+        btn.classList.remove('text-deep-navy', 'border-transparent');
+
+        // Show / hide cards
+        destCards.forEach(card => {
+          if (filter === 'all' || card.dataset.region === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

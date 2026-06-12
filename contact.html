@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Assets/favicon.png" />
+  <title>Contact Us — Holiday Trolley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen flex flex-col justify-between bg-surface selection:bg-gold-accent selection:text-deep-navy">
+
+      <!-- Top bar -->
+      <div class="w-full bg-gold-accent/80 py-2.5 px-4 text-center shrink-0">
+        <p class="text-[#12232F] font-bold text-[0.9vw] tracking-wide">Book with confidence. Call today — we'll answer
+          in under a minute.</p>
+      </div>
+
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 transition-all duration-300 border-b py-[3vh] bg-pure-white shadow-sm py-5 border-outline-variant"
+        id="main-header">
+        <div
+          class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <a class="flex items-center" href="index.html"><img alt="Holiday Trolley"
+              class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" /></a>
+          <nav class="hidden lg:flex gap-12 items-center">
+            <a href="destinations.html"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Destinations</a>
+            <a href="#"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Tours</a>
+            <a href="about.html"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">About</a>
+            <a href="contact.html"
+              class="text-gold-accent font-semibold relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-gold-accent font-sans text-[0.8vw] tracking-widest uppercase">Contact</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <div class="hidden xl:flex items-center"><a class="flex items-center gap-3 group"
+                href="tel:03332422222"><svg aria-hidden="true"
+                  class="lucide lucide-phone-call text-[#EE9131] group-hover:text-[#EE9131] transition-colors shrink-0"
+                  fill="none" height="36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" viewbox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2a9 9 0 0 1 9 9"></path>
+                  <path d="M13 6a5 5 0 0 1 5 5"></path>
+                  <path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                  </path>
+                </svg>
+                <div class="flex flex-col leading-tight"><span class="text-slate-400 text-[0.7vw]">9am -
+                    11pm</span><span
+                    class="text-deep-navy font-extrabold text-[1vw] tracking-wide group-hover:text-gold-accent transition-colors">0203
+                    023 7776</span></div>
+              </a></div>
+            <div class="flex gap-2 ml-[1vw]"><button
+                class="bg-gold-accent text-pure-white px-8 py-3 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm">Enquire
+                Now</button></div>
+            <button aria-label="Open navigation menu"
+              class="lg:hidden p-2 text-deep-navy hover:text-gold-accent transition-colors"><svg aria-hidden="true"
+                class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 19h16"></path>
+              </svg></button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          class="lg:hidden absolute top-full left-0 w-full bg-pure-white border-b border-outline-variant shadow-xl p-6 transition-all duration-300 animate-fadeIn"
+          id="mobile-menu" style="display:none">
+          <div class="flex flex-col gap-4">
+            <a href="destinations.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Destinations</a>
+            <a href="#" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Tours</a>
+            <a href="about.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">About</a>
+            <a href="contact.html"
+              class="text-left text-gold-accent font-serif text-lg py-2 border-b border-slate-100">Contact</a>
+            <div class="flex flex-col gap-3 pt-4"><a
+                class="flex items-center gap-2 text-deep-navy font-bold py-2 justify-center border border-slate-200"
+                href="tel:03332422222">Call 03332 422 222</a><button
+                class="w-full bg-gold-accent text-pure-white py-3 font-sans text-xs tracking-widest uppercase font-bold text-center">Start
+                Bespoke Enquiry</button></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="relative bg-deep-navy overflow-hidden" style="height: 46vh; min-height: 300px;">
+        <img src="Assets/Hero Imgs/Singapore-Hero.jpg" alt="Contact Holiday Trolley"
+          class="absolute inset-0 w-full h-full object-cover select-none"
+          style="filter: brightness(0.38);" />
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+          <div class="max-w-3xl space-y-5">
+            <div class="flex items-center justify-center gap-3">
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+              <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">We'd Love to Hear from
+                You</span>
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+            </div>
+            <h1
+              class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+              style="text-shadow: rgba(0,0,0,0.45) 0px 2px 24px;">Get in Touch</h1>
+            <p class="text-[1.4vw] text-pure-white/90 max-w-lg mx-auto font-sans font-light leading-relaxed">Our expert
+              consultants are available daily, 9am – 11pm, ready to start planning your perfect escape.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Contact Bar -->
+      <section class="bg-gold-accent">
+        <div
+          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-0">
+          <a href="tel:03332422222"
+            class="flex items-center gap-4 py-6 px-4 border-b md:border-b-0 md:border-r border-deep-navy/20 group">
+            <svg class="text-deep-navy shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+              </path>
+            </svg>
+            <div>
+              <p class="text-deep-navy font-extrabold text-[1vw] tracking-wide">03332 422 222</p>
+              <p class="text-deep-navy/70 text-[0.7vw] font-sans uppercase tracking-wider">Call Us Daily 9am – 11pm</p>
+            </div>
+          </a>
+          <a href="mailto:info@holidaytrolley.co.uk"
+            class="flex items-center gap-4 py-6 px-4 border-b md:border-b-0 md:border-r border-deep-navy/20 group">
+            <svg class="text-deep-navy shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+              <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+            </svg>
+            <div>
+              <p class="text-deep-navy font-extrabold text-[1vw] tracking-wide">info@holidaytrolley.co.uk</p>
+              <p class="text-deep-navy/70 text-[0.7vw] font-sans uppercase tracking-wider">Email Us Anytime</p>
+            </div>
+          </a>
+          <div class="flex items-center gap-4 py-6 px-4">
+            <svg class="text-deep-navy shrink-0" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+              stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+              </path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <div>
+              <p class="text-deep-navy font-extrabold text-[1vw] tracking-wide">London, UK</p>
+              <p class="text-deep-navy/70 text-[0.7vw] font-sans uppercase tracking-wider">12 Stephen Mews, W1T 1AH</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Contact Section -->
+      <section class="py-20 bg-soft-cream">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+
+            <!-- Enquiry Form — col-span-2 -->
+            <div class="lg:col-span-2">
+              <div class="bg-pure-white border border-outline-variant/30 card-shadow">
+                <!-- Gold accent bar -->
+                <div class="bg-gold-accent h-1.5 w-full"></div>
+                <div class="p-8 md:p-10 space-y-8">
+                  <div class="space-y-2">
+                    <span
+                      class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Tailor-Made
+                      Travel</span>
+                    <h2 class="text-2xl md:text-3xl font-serif text-deep-navy font-medium">Begin Your Bespoke Enquiry
+                    </h2>
+                    <p class="text-[0.85vw] text-on-surface-variant font-light leading-relaxed">Fill in the form below
+                      and a dedicated travel consultant will personally craft your itinerary within 24 hours.</p>
+                  </div>
+
+                  <form class="space-y-5" id="contact-form">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div class="space-y-1.5">
+                        <label
+                          class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Full
+                          Name *</label>
+                        <input
+                          class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw]"
+                          name="name" placeholder="Your full name" required type="text" />
+                      </div>
+                      <div class="space-y-1.5">
+                        <label
+                          class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Email
+                          Address *</label>
+                        <input
+                          class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw]"
+                          name="email" placeholder="your@email.com" required type="email" />
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div class="space-y-1.5">
+                        <label
+                          class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Phone
+                          Number *</label>
+                        <input
+                          class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw]"
+                          name="phone" placeholder="+44 000 000 0000" required type="tel" />
+                      </div>
+                      <div class="space-y-1.5">
+                        <label
+                          class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Desired
+                          Destination</label>
+                        <input
+                          class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw]"
+                          name="destination" placeholder="e.g. Maldives, Kenya, Bali…" type="text" />
+                      </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                      <div class="space-y-1.5">
+                        <label
+                          class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Travel
+                          Style</label>
+                        <select
+                          class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw]"
+                          name="travelStyle">
+                          <option value="">Select a style…</option>
+                          <option value="Relaxed Luxury">Relaxed Luxury — Beaches &amp; Pampering</option>
+                          <option value="Adventure & Culture">Adventure &amp; Culture — Immersive Escapes</option>
+                          <option value="Bespoke Private">Bespoke Private — Seclusion &amp; Villas</option>
+                          <option value="Multi-Centre">Combination / Multi-Centre</option>
+                          <option value="Safari">Safari &amp; Wildlife</option>
+                          <option value="Honeymoon">Honeymoon &amp; Romance</option>
+                        </select>
+                      </div>
+                      <div class="space-y-1.5">
+                        <label
+                          class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Approximate
+                          Duration</label>
+                        <select
+                          class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw]"
+                          name="duration">
+                          <option value="">Select duration…</option>
+                          <option value="7 Nights">7 Nights</option>
+                          <option value="10 Nights">10 Nights</option>
+                          <option value="14 Nights">14 Nights</option>
+                          <option value="21+ Nights">21+ Nights</option>
+                          <option value="Flexible">Flexible / To Be Advised</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="space-y-1.5">
+                      <label
+                        class="text-[0.625rem] font-semibold text-on-surface-variant uppercase tracking-wider block">Enquiry
+                        / Special Requests</label>
+                      <textarea
+                        class="w-full bg-soft-cream border-b border-outline-variant p-3 text-deep-navy focus:outline-none focus:border-gold-accent transition-colors text-[0.85vw] font-light resize-none"
+                        name="message" placeholder="Tell us about your dream holiday — special occasions, must-haves, preferences, group size…"
+                        rows="5"></textarea>
+                    </div>
+
+                    <!-- ATOL note -->
+                    <div class="flex items-start gap-3 bg-soft-cream border border-outline-variant/30 p-4">
+                      <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="14" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                        <path d="m9 11 3 3L22 4"></path>
+                      </svg>
+                      <p class="text-[0.625rem] text-on-surface-variant leading-relaxed">All holidays are <strong
+                          class="text-deep-navy">100% ATOL protected</strong> (Licence 3517) &amp; <strong
+                          class="text-deep-navy">ABTA bonded</strong>. Your deposits and payments are fully
+                        safeguarded. No booking fees apply to initial enquiries.</p>
+                    </div>
+
+                    <button
+                      class="w-full bg-gold-accent text-pure-white py-4 font-sans text-[0.8vw] tracking-widest uppercase font-extrabold hover:bg-gold-hover transition-all duration-300 shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                      type="submit" id="form-submit-btn">
+                      Send My Enquiry
+                      <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z">
+                        </path>
+                        <path d="m21.854 2.147-10.94 10.939"></path>
+                      </svg>
+                    </button>
+                    <!-- Success message (hidden by default) -->
+                    <div id="form-success"
+                      class="hidden bg-emerald-50 border border-emerald-500/20 p-4 text-center space-y-1">
+                      <p class="text-deep-navy font-semibold text-[0.85vw]">Enquiry received — thank you!</p>
+                      <p class="text-on-surface-variant text-[0.75vw] font-light">One of our consultants will be in
+                        touch within 24 hours to begin crafting your bespoke itinerary.</p>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar: Office Info -->
+            <div class="space-y-6">
+
+              <!-- Office card -->
+              <div class="bg-deep-navy overflow-hidden">
+                <div class="relative overflow-hidden" style="height: 180px;">
+                  <img src="Assets/Hero Imgs/Singapore-Hero.jpg" alt="London Office"
+                    class="w-full h-full object-cover" style="filter: brightness(0.5);" />
+                  <div class="absolute inset-0 flex items-end p-6">
+                    <div>
+                      <span
+                        class="text-[0.65vw] font-bold text-gold-accent uppercase tracking-[0.3em] block mb-1">Our
+                        Office</span>
+                      <h3 class="font-serif text-pure-white text-[1.2vw] font-medium">London HQ</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-6 space-y-5">
+                  <div class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="16" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0">
+                      </path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <p class="text-pure-white/80 text-[0.8vw] leading-relaxed font-light">12 Stephen Mews<br />London,
+                      W1T 1AH<br />United Kingdom</p>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="16" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M12 6v6l4 2"></path>
+                      <circle cx="12" cy="12" r="10"></circle>
+                    </svg>
+                    <p class="text-pure-white/80 text-[0.8vw] leading-relaxed font-light">Open Daily<br />9AM – 11PM
+                      GMT</p>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="16" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                      </path>
+                    </svg>
+                    <div>
+                      <a href="tel:03332422222"
+                        class="text-pure-white font-bold text-[0.9vw] tracking-wide hover:text-gold-accent transition-colors block">0203
+                        023 7776</a>
+                      <a href="tel:03332422222"
+                        class="text-pure-white/60 text-[0.7vw] hover:text-gold-accent transition-colors block mt-0.5">03332
+                        422 222 (Corporate)</a>
+                    </div>
+                  </div>
+                  <div class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="16" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+                      <rect height="16" rx="2" width="20" x="2" y="4"></rect>
+                    </svg>
+                    <a href="mailto:info@holidaytrolley.co.uk"
+                      class="text-pure-white/80 text-[0.8vw] hover:text-gold-accent transition-colors font-light">info@holidaytrolley.co.uk</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Accreditations -->
+              <div class="bg-pure-white border border-outline-variant/30 p-6 card-shadow space-y-4">
+                <h4 class="font-serif text-deep-navy font-medium text-[1vw]">Fully Accredited &amp; Protected</h4>
+                <div class="flex items-center gap-4 flex-wrap">
+                  <img src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA" class="h-12 w-auto object-contain" />
+                </div>
+                <div class="space-y-2 text-[0.75vw] text-on-surface-variant font-light leading-relaxed">
+                  <p>Holiday Trolley Ltd (No. 08234384). ATOL Protected 3517. Secure banking guarantees apply.</p>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Strip -->
+      <section class="py-16 bg-pure-white border-t border-outline-variant/30">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-10">
+          <div class="text-center space-y-2">
+            <span
+              class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">FAQ</span>
+            <h2 class="text-2xl md:text-3xl font-serif text-deep-navy font-medium">Common Questions</h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="border-l-2 border-gold-accent pl-6 space-y-2">
+              <h4 class="font-serif text-deep-navy font-medium text-[1vw]">How quickly will I receive a response?</h4>
+              <p class="text-[0.85vw] text-on-surface-variant font-light leading-relaxed">Our consultants aim to
+                respond to all enquiries within 24 hours. For urgent requests, call us directly — we answer in under a
+                minute.</p>
+            </div>
+            <div class="border-l-2 border-gold-accent pl-6 space-y-2">
+              <h4 class="font-serif text-deep-navy font-medium text-[1vw]">Is there a fee for your initial
+                consultation?</h4>
+              <p class="text-[0.85vw] text-on-surface-variant font-light leading-relaxed">No — your initial enquiry
+                and itinerary planning consultation is completely free of charge and without obligation.</p>
+            </div>
+            <div class="border-l-2 border-gold-accent pl-6 space-y-2">
+              <h4 class="font-serif text-deep-navy font-medium text-[1vw]">Can you book any destination?</h4>
+              <p class="text-[0.85vw] text-on-surface-variant font-light leading-relaxed">Yes. We specialise in
+                worldwide luxury travel. If you have a destination in mind — however remote — we can build an
+                itinerary around it.</p>
+            </div>
+            <div class="border-l-2 border-gold-accent pl-6 space-y-2">
+              <h4 class="font-serif text-deep-navy font-medium text-[1vw]">What is the minimum deposit?</h4>
+              <p class="text-[0.85vw] text-on-surface-variant font-light leading-relaxed">Low deposits start from just
+                £99 per person, allowing you to secure your holiday and the best available rates while you finalise
+                plans.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="wrap max-w-container-max mx-auto">
+          <div class="foot-grid">
+            <div class="foot-col">
+              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley">
+              <p>At Holiday Trolley, we pride ourselves on being one of the leading travel service providers. We
+                specialize in creating tailored holiday packages designed to turn your dream getaway into reality.</p>
+            </div>
+            <div class="foot-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Booking Conditions</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Contact</h4>
+              <ul>
+                <li class="row"><span>Location</span><span>100 Avebury Boulevard, Milton Keynes, MK9 1FH</span></li>
+                <li class="row"><span>Phone</span><a href="tel:03332422222">03332 422 222</a></li>
+                <li class="row"><span>Email</span><a
+                    href="mailto:info@holidaytrolley.co.uk">info@holidaytrolley.co.uk</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Follow Us</h4>
+              <ul style="margin-bottom:32px">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ul>
+              <img class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected">
+            </div>
+          </div>
+          <div class="legal">
+            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no-
+              218057223.</h5>
+            <p>All the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you
+              pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything
+              you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but
+              all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the
+              flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not
+              apply to all flights. Holiday Trolley will provide you with information on the protection that applies in
+              the case of each flight before you make your booking. If you do not receive an ATOL Certificate, then the
+              booking will not be ATOL protected. Please see our booking conditions for information, or for more
+              information about financial protection and the ATOL Certificate go to: www.caa.co.uk.</p>
+          </div>
+        </div>
+        <div class="botbar">
+          <div class="wrap botbar-in">
+            <p>Copyright &copy; 2026 Holiday Trolley UK. All rights reserved.</p>
+            <div class="pays">
+              <img src="Assets/Payment-Methods.webp" alt="Payment Methods">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.querySelector('[aria-label="Open navigation menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+
+    // Form submit feedback
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const submitBtn = document.getElementById('form-submit-btn');
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        submitBtn.style.display = 'none';
+        successMsg.classList.remove('hidden');
+        form.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
+      });
+    }
+  </script>
+</body>
+
+</html>

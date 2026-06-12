@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Assets/favicon.png" />
+  <title>About Us — Holiday Trolley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen flex flex-col justify-between bg-surface selection:bg-gold-accent selection:text-deep-navy">
+
+      <!-- Top bar -->
+      <div class="w-full bg-gold-accent/80 py-2.5 px-4 text-center shrink-0">
+        <p class="text-[#12232F] font-bold text-[0.9vw] tracking-wide">Book with confidence. Call today — we'll answer
+          in under a minute.</p>
+      </div>
+
+      <!-- Header -->
+      <header
+        class="sticky top-0 z-50 transition-all duration-300 border-b py-[3vh] bg-pure-white shadow-sm py-5 border-outline-variant"
+        id="main-header">
+        <div
+          class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <a class="flex items-center" href="index.html"><img alt="Holiday Trolley"
+              class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" /></a>
+          <nav class="hidden lg:flex gap-12 items-center">
+            <a href="destinations.html"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Destinations</a>
+            <a href="#"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Tours</a>
+            <a href="about.html"
+              class="text-gold-accent font-semibold relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-gold-accent font-sans text-[0.8vw] tracking-widest uppercase">About</a>
+            <a href="contact.html"
+              class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Contact</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <div class="hidden xl:flex items-center"><a class="flex items-center gap-3 group"
+                href="tel:03332422222"><svg aria-hidden="true"
+                  class="lucide lucide-phone-call text-[#EE9131] group-hover:text-[#EE9131] transition-colors shrink-0"
+                  fill="none" height="36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.5" viewbox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2a9 9 0 0 1 9 9"></path>
+                  <path d="M13 6a5 5 0 0 1 5 5"></path>
+                  <path
+                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384">
+                  </path>
+                </svg>
+                <div class="flex flex-col leading-tight"><span class="text-slate-400 text-[0.7vw]">9am -
+                    11pm</span><span
+                    class="text-deep-navy font-extrabold text-[1vw] tracking-wide group-hover:text-gold-accent transition-colors">0203
+                    023 7776</span></div>
+              </a></div>
+            <div class="flex gap-2 ml-[1vw]"><button
+                class="bg-gold-accent text-pure-white px-8 py-3 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm">Enquire
+                Now</button></div>
+            <button aria-label="Open navigation menu"
+              class="lg:hidden p-2 text-deep-navy hover:text-gold-accent transition-colors"><svg aria-hidden="true"
+                class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5h16"></path>
+                <path d="M4 12h16"></path>
+                <path d="M4 19h16"></path>
+              </svg></button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div
+          class="lg:hidden absolute top-full left-0 w-full bg-pure-white border-b border-outline-variant shadow-xl p-6 transition-all duration-300 animate-fadeIn"
+          id="mobile-menu" style="display:none">
+          <div class="flex flex-col gap-4">
+            <a href="destinations.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Destinations</a>
+            <a href="#" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Tours</a>
+            <a href="about.html"
+              class="text-left text-gold-accent font-serif text-lg py-2 border-b border-slate-100">About</a>
+            <a href="contact.html"
+              class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Contact</a>
+            <div class="flex flex-col gap-3 pt-4"><a
+                class="flex items-center gap-2 text-deep-navy font-bold py-2 justify-center border border-slate-200"
+                href="tel:03332422222">Call 03332 422 222</a><button
+                class="w-full bg-gold-accent text-pure-white py-3 font-sans text-xs tracking-widest uppercase font-bold text-center">Start
+                Bespoke Enquiry</button></div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="relative bg-deep-navy overflow-hidden" style="height: 55vh; min-height: 360px;">
+        <img src="Assets/Hero Imgs/Malaysia-Hero.jpg" alt="About Holiday Trolley"
+          class="absolute inset-0 w-full h-full object-cover select-none"
+          style="filter: brightness(0.42);" />
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+          <div class="max-w-3xl space-y-6">
+            <div class="flex items-center justify-center gap-3">
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+              <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Est. 1987</span>
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+            </div>
+            <h1
+              class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight"
+              style="text-shadow: rgba(0,0,0,0.45) 0px 2px 24px;">About Holiday Trolley</h1>
+            <p class="text-[1.4vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">Nearly
+              four decades of crafting extraordinary, tailor-made holidays for discerning travellers across the UK.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats bar -->
+      <section class="bg-deep-navy border-t border-white/10">
+        <div
+          class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 lg:grid-cols-4 gap-0">
+          <div class="py-8 px-6 text-center border-r border-white/10">
+            <p class="font-serif text-gold-accent font-bold" style="font-size: 2.5vw;">39</p>
+            <p class="text-pure-white/70 font-sans uppercase tracking-widest text-[0.7vw] mt-1">Years of Heritage</p>
+          </div>
+          <div class="py-8 px-6 text-center border-r border-white/10">
+            <p class="font-serif text-gold-accent font-bold" style="font-size: 2.5vw;">9,658+</p>
+            <p class="text-pure-white/70 font-sans uppercase tracking-widest text-[0.7vw] mt-1">5-Star Reviews</p>
+          </div>
+          <div class="py-8 px-6 text-center border-r border-white/10">
+            <p class="font-serif text-gold-accent font-bold" style="font-size: 2.5vw;">4.9</p>
+            <p class="text-pure-white/70 font-sans uppercase tracking-widest text-[0.7vw] mt-1">Average Rating</p>
+          </div>
+          <div class="py-8 px-6 text-center">
+            <p class="font-serif text-gold-accent font-bold" style="font-size: 2.5vw;">100%</p>
+            <p class="text-pure-white/70 font-sans uppercase tracking-widest text-[0.7vw] mt-1">ATOL Protected</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story -->
+      <section class="py-20 bg-pure-white">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Image -->
+            <div class="relative overflow-hidden rounded-2xl shadow-xl" style="height: 520px;">
+              <img src="Assets/Destinations/Maldives.avif" alt="Luxury Travel"
+                class="absolute inset-0 w-full h-full object-cover" />
+              <div class="absolute inset-0 bg-gradient-to-t from-deep-navy/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-0 left-0 right-0 p-8">
+                <div class="bg-gold-accent inline-block px-4 py-2 mb-3">
+                  <span class="text-deep-navy font-bold font-sans uppercase tracking-widest text-[0.7vw]">ATOL
+                    Protected 3517</span>
+                </div>
+                <p class="text-pure-white font-serif text-[1.2vw] font-medium leading-snug">Trusted by thousands of UK
+                  travellers since 1987.</p>
+              </div>
+            </div>
+            <!-- Text -->
+            <div class="space-y-6">
+              <div class="space-y-3">
+                <span
+                  class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Our Story</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Nearly Four Decades of Bespoke
+                  Travel</h2>
+              </div>
+              <div class="space-y-4 text-[0.9vw] text-on-surface-variant leading-relaxed font-light">
+                <p>Holiday Trolley was founded in 1987 with a single, unwavering mission: to create holidays that
+                  genuinely change lives. From our very first booking to the thousands we arrange each year, every trip
+                  we curate is built around you — your dreams, your pace, your perfect escape.</p>
+                <p>We are one of the UK's most trusted luxury travel specialists, holding dual ATOL and ABTA
+                  accreditation — meaning every penny you spend with us is fully financially protected. Our team of
+                  expert travel consultants draw on decades of first-hand destination knowledge to build itineraries
+                  that no algorithm could replicate.</p>
+                <p>Whether you're dreaming of an overwater villa in the Maldives, a Big Five safari across Kenya's
+                  Masai Mara, or a tailored multi-centre adventure through Southeast Asia, we bring the same meticulous
+                  care and personal touch to every booking.</p>
+              </div>
+              <div class="flex items-center gap-4 pt-2">
+                <img src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA" class="h-16 w-auto object-contain" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="py-20 bg-soft-cream">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-12">
+          <div class="text-center space-y-3">
+            <span
+              class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Why Holiday
+              Trolley</span>
+            <h2 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Our Promise to You</h2>
+            <p class="text-[0.9vw] text-on-surface-variant max-w-xl mx-auto font-light leading-relaxed">Every decision
+              we make puts your safety, satisfaction, and sense of wonder first.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div class="bg-pure-white p-8 space-y-4 border border-outline-variant/30 card-shadow">
+              <div class="w-11 h-11 bg-gold-accent/10 flex items-center justify-center">
+                <svg class="text-gold-accent" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z">
+                  </path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </div>
+              <h3 class="font-serif font-semibold text-deep-navy text-[1.1vw]">ATOL &amp; ABTA Protected</h3>
+              <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">Dual licensing means your
+                flights and deposits are 100% financially protected — no exceptions, no small print.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-pure-white p-8 space-y-4 border border-outline-variant/30 card-shadow">
+              <div class="w-11 h-11 bg-gold-accent/10 flex items-center justify-center">
+                <svg class="text-gold-accent" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z">
+                  </path>
+                </svg>
+              </div>
+              <h3 class="font-serif font-semibold text-deep-navy text-[1.1vw]">39 Years of Expertise</h3>
+              <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">Since 1987, our travel
+                experts have built deep personal knowledge of every destination we offer — there's no substitute for
+                experience.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-pure-white p-8 space-y-4 border border-outline-variant/30 card-shadow">
+              <div class="w-11 h-11 bg-gold-accent/10 flex items-center justify-center">
+                <svg class="text-gold-accent" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 2v4"></path>
+                  <path d="M16 2v4"></path>
+                  <rect height="18" rx="2" width="18" x="3" y="4"></rect>
+                  <path d="M3 10h18"></path>
+                </svg>
+              </div>
+              <h3 class="font-serif font-semibold text-deep-navy text-[1.1vw]">Low Deposits from £99pp</h3>
+              <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">Secure your dream holiday
+                today with a low deposit, locking in the best rates and availability while you plan.</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-pure-white p-8 space-y-4 border border-outline-variant/30 card-shadow">
+              <div class="w-11 h-11 bg-gold-accent/10 flex items-center justify-center">
+                <svg class="text-gold-accent" fill="none" height="24" stroke="currentColor" stroke-linecap="round"
+                  stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526">
+                  </path>
+                  <circle cx="12" cy="8" r="6"></circle>
+                </svg>
+              </div>
+              <h3 class="font-serif font-semibold text-deep-navy text-[1.1vw]">Bespoke Price-Match</h3>
+              <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">Found a comparable
+                like-for-like luxury itinerary at a lower price? We will match it — tier for tier, guarantee for
+                guarantee.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Values / Timeline -->
+      <section class="py-20 bg-pure-white">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+            <div class="space-y-8">
+              <div class="space-y-3">
+                <span
+                  class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Our
+                  Journey</span>
+                <h2 class="text-3xl md:text-4xl font-serif text-deep-navy font-medium">Four Decades in the Making</h2>
+              </div>
+              <!-- Timeline -->
+              <div class="relative pl-6 space-y-8">
+                <div class="absolute left-1.5 top-1 bottom-1 w-0.5 bg-gold-accent"></div>
+
+                <div class="relative">
+                  <div
+                    class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-pure-white rounded-full border-2 border-gold-accent">
+                  </div>
+                  <div class="space-y-1">
+                    <span
+                      class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">1987</span>
+                    <h3 class="font-serif text-base text-deep-navy font-medium">Founded in London</h3>
+                    <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">Holiday Trolley opens
+                      its first London office, with a small team of passionate travel experts determined to redefine
+                      what a tailor-made holiday could be.</p>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <div
+                    class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-pure-white rounded-full border-2 border-gold-accent">
+                  </div>
+                  <div class="space-y-1">
+                    <span
+                      class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">2001</span>
+                    <h3 class="font-serif text-base text-deep-navy font-medium">ATOL Accreditation Awarded</h3>
+                    <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">We achieve full ATOL
+                      protection (licence 3517) — a milestone that cements our commitment to financial security and
+                      client trust above all else.</p>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <div
+                    class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-pure-white rounded-full border-2 border-gold-accent">
+                  </div>
+                  <div class="space-y-1">
+                    <span
+                      class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">2015</span>
+                    <h3 class="font-serif text-base text-deep-navy font-medium">9,000 Five-Star Reviews</h3>
+                    <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">A landmark moment —
+                      we crossed 9,000 verified five-star reviews, reflecting thousands of
+                      life-changing holidays delivered.</p>
+                  </div>
+                </div>
+
+                <div class="relative">
+                  <div
+                    class="absolute -left-[23px] top-1.5 w-3.5 h-3.5 bg-gold-accent rounded-full border-2 border-gold-accent">
+                  </div>
+                  <div class="space-y-1">
+                    <span
+                      class="text-[0.625rem] font-bold text-gold-accent font-sans uppercase tracking-widest block">Today</span>
+                    <h3 class="font-serif text-base text-deep-navy font-medium">A Trusted UK Institution</h3>
+                    <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">With over 9,658 verified five-star reviews, we remain one of the UK's most respected independent luxury travel
+                      specialists — still guided by our original ethos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right column: Accreditations + Team promise -->
+            <div class="space-y-8">
+              <!-- Accreditations -->
+              <div class="bg-soft-cream border border-outline-variant/30 p-8 space-y-6">
+                <h3 class="font-serif text-deep-navy font-medium text-[1.2vw]">Our Accreditations</h3>
+                <p class="text-[0.85vw] text-on-surface-variant leading-relaxed font-light">We hold full membership
+                  and licensing across all major UK travel industry bodies, ensuring that every booking with Holiday
+                  Trolley is fully protected.</p>
+                <div class="flex items-center gap-6 flex-wrap">
+                  <img src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected" class="h-16 w-auto object-contain" />
+                </div>
+                <ul class="space-y-3 text-[0.85vw] text-on-surface-variant font-light">
+                  <li class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="14" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span><strong class="text-deep-navy">ATOL Licence 3517</strong> — all flight-inclusive holidays are
+                      fully ATOL protected</span>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="14" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span><strong class="text-deep-navy">ABTA Member</strong> — additional consumer protection and a
+                      strict code of conduct</span>
+                  </li>
+                  <li class="flex gap-3 items-start">
+                    <svg class="text-gold-accent shrink-0 mt-0.5" fill="none" height="14" stroke="currentColor"
+                      stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="14"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
+                      <path d="m9 11 3 3L22 4"></path>
+                    </svg>
+                    <span><strong class="text-deep-navy">Registered in England</strong> — Holiday Trolley Ltd, Company
+                      No. 08234384, VAT No. 218057223</span>
+                  </li>
+                </ul>
+              </div>
+              <!-- Our team promise -->
+              <div class="bg-deep-navy p-8 space-y-4">
+                <div class="flex items-center gap-3 mb-2">
+                  <span class="block w-8 h-px bg-gold-accent/70"></span>
+                  <span class="text-[0.7vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Our Commitment</span>
+                </div>
+                <h3 class="font-serif text-pure-white font-medium text-[1.2vw] leading-snug">"We don't sell holidays.
+                  We craft journeys that stay with you forever."</h3>
+                <p class="text-pure-white/70 text-[0.85vw] leading-relaxed font-light">Every member of our team has
+                  personally visited the destinations they recommend. No scripts, no upsells — just genuine expertise
+                  and a shared love of extraordinary travel.</p>
+                <a href="contact.html"
+                  class="inline-flex items-center gap-2 bg-gold-accent text-pure-white px-6 py-3 font-sans text-[0.75vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 mt-2">
+                  Speak to an Expert
+                  <svg fill="none" height="13" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-width="2" viewbox="0 0 24 24" width="13" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12h14"></path>
+                    <path d="m12 5 7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trusted Partners -->
+      <section class="py-16 bg-soft-cream border-t border-outline-variant/30">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-10">
+          <div class="text-center space-y-2">
+            <span class="text-[0.625rem] font-semibold text-gold-accent uppercase tracking-widest block">Our
+              Partners</span>
+            <h2 class="text-2xl font-serif text-deep-navy font-medium">Preferred Airlines &amp; Hotel Groups</h2>
+          </div>
+          <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-70">
+            <img src="Assets/Airlines/emirates_logo_e0645eedaf.png" alt="Emirates" class="w-full object-contain h-9" />
+            <img src="Assets/Airlines/qatar_airlines_logo_4b806b7da4.png" alt="Qatar Airways"
+              class="w-full object-contain h-9" />
+            <img src="Assets/Airlines/british_airways_logo_3782351f99.png" alt="British Airways"
+              class="w-full object-contain h-9" />
+            <img src="Assets/Airlines/singapore_airlines_logo_e8b86222af.png" alt="Singapore Airlines"
+              class="w-full object-contain h-9" />
+            <img src="Assets/Airlines/turkish_airlines_logo_439238dd02.png" alt="Turkish Airlines"
+              class="w-full object-contain h-9" />
+            <img src="Assets/Airlines/etihad_logo_2aa3a6f875.png" alt="Etihad" class="w-full object-contain h-9" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-20 bg-deep-navy text-center">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-6">
+          <div class="flex items-center justify-center gap-3">
+            <span class="block w-10 h-px bg-gold-accent/70"></span>
+            <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Start Your Journey</span>
+            <span class="block w-10 h-px bg-gold-accent/70"></span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-serif text-pure-white font-medium">Ready to plan your perfect holiday?
+          </h2>
+          <p class="text-[1vw] text-pure-white/70 max-w-xl mx-auto font-light leading-relaxed">Speak to one of our
+            expert consultants — no obligation, just honest advice from people who truly love travel.</p>
+          <div class="flex items-center justify-center gap-4 flex-wrap">
+            <a href="contact.html"
+              class="bg-gold-accent text-pure-white px-10 py-4 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-block">Enquire
+              Now</a>
+            <a href="tel:03332422222"
+              class="border border-pure-white/40 text-pure-white px-10 py-4 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:border-gold-accent hover:text-gold-accent transition-all duration-300 inline-block">Call
+              03332 422 222</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="wrap max-w-container-max mx-auto">
+          <div class="foot-grid">
+            <div class="foot-col">
+              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley">
+              <p>At Holiday Trolley, we pride ourselves on being one of the leading travel service providers. We
+                specialize in creating tailored holiday packages designed to turn your dream getaway into reality.</p>
+            </div>
+            <div class="foot-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Terms &amp; Conditions</a></li>
+                <li><a href="#">Booking Conditions</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Contact</h4>
+              <ul>
+                <li class="row"><span>Location</span><span>100 Avebury Boulevard, Milton Keynes, MK9 1FH</span></li>
+                <li class="row"><span>Phone</span><a href="tel:03332422222">03332 422 222</a></li>
+                <li class="row"><span>Email</span><a
+                    href="mailto:info@holidaytrolley.co.uk">info@holidaytrolley.co.uk</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Follow Us</h4>
+              <ul style="margin-bottom:32px">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ul>
+              <img class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected">
+            </div>
+          </div>
+          <div class="legal">
+            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no-
+              218057223.</h5>
+            <p>All the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you
+              pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything
+              you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but
+              all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the
+              flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not
+              apply to all flights. Holiday Trolley will provide you with information on the protection that applies in
+              the case of each flight before you make your booking. If you do not receive an ATOL Certificate, then the
+              booking will not be ATOL protected. Please see our booking conditions for information, or for more
+              information about financial protection and the ATOL Certificate go to: www.caa.co.uk.</p>
+          </div>
+        </div>
+        <div class="botbar">
+          <div class="wrap botbar-in">
+            <p>Copyright &copy; 2026 Holiday Trolley UK. All rights reserved.</p>
+            <div class="pays">
+              <img src="Assets/Payment-Methods.webp" alt="Payment Methods">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector('[aria-label="Open navigation menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+
+</html>
