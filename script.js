@@ -322,5 +322,111 @@
       }
     });
 
+    /* ---------- Custom Month Picker ---------- */
+    (function monthPicker() {
+      var input = $('#ht-date-input');
+      if (!input) return;
+
+      var MONTHS = ['January','February','March','April','May','June',
+                    'July','August','September','October','November','December'];
+      var SHORT  = ['Jan','Feb','Mar','Apr','May','Jun',
+                    'Jul','Aug','Sep','Oct','Nov','Dec'];
+
+      var now = new Date();
+      var minYear  = now.getFullYear();
+      var minMonth = now.getMonth(); // 0-indexed
+
+      var pickerYear    = minYear;
+      var selectedYear  = null;
+      var selectedMonth = null;
+
+      /* Build picker DOM inside the input's relative parent */
+      var wrap = input.parentElement;
+
+      var picker = document.createElement('div');
+      picker.className = 'ht-month-picker';
+      picker.style.display = 'none';
+      picker.innerHTML =
+        '<div class="ht-mp-stripe"></div>' +
+        '<div class="ht-mp-header">' +
+          '<button class="ht-mp-nav ht-mp-prev" type="button">&#8592;</button>' +
+          '<span class="ht-mp-year-label"></span>' +
+          '<button class="ht-mp-nav ht-mp-next" type="button">&#8594;</button>' +
+        '</div>' +
+        '<div class="ht-mp-divider"></div>' +
+        '<div class="ht-mp-grid"></div>';
+      wrap.appendChild(picker);
+
+      var yearLabel = picker.querySelector('.ht-mp-year-label');
+      var grid      = picker.querySelector('.ht-mp-grid');
+      var prevBtn   = picker.querySelector('.ht-mp-prev');
+      var nextBtn   = picker.querySelector('.ht-mp-next');
+
+      function render() {
+        yearLabel.textContent = pickerYear;
+        prevBtn.disabled = (pickerYear <= minYear);
+
+        grid.innerHTML = '';
+        for (var m = 0; m < 12; m++) {
+          var btn = document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'ht-mp-btn';
+          btn.textContent = SHORT[m];
+          btn.dataset.month = m;
+
+          if (pickerYear === minYear && m < minMonth) {
+            btn.classList.add('ht-mp-past');
+          }
+          if (pickerYear === now.getFullYear() && m === now.getMonth()) {
+            btn.classList.add('ht-mp-current');
+          }
+          if (pickerYear === selectedYear && m === selectedMonth) {
+            btn.classList.add('ht-mp-selected');
+          }
+
+          (function (mo) {
+            btn.addEventListener('click', function (e) {
+              e.stopPropagation();
+              selectedYear  = pickerYear;
+              selectedMonth = mo;
+              input.value   = MONTHS[mo] + ' ' + pickerYear;
+              close();
+            });
+          })(m);
+
+          grid.appendChild(btn);
+        }
+      }
+
+      function open() {
+        render();
+        picker.style.display = '';
+      }
+
+      function close() {
+        picker.style.display = 'none';
+      }
+
+      input.addEventListener('click', function (e) {
+        e.stopPropagation();
+        picker.style.display === 'none' ? open() : close();
+      });
+
+      prevBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        if (pickerYear > minYear) { pickerYear--; render(); }
+      });
+
+      nextBtn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        pickerYear++;
+        render();
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!picker.contains(e.target) && e.target !== input) close();
+      });
+    })();
+
   });
 })();

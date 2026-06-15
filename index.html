@@ -343,7 +343,7 @@
                     type="button">Phuket</button>
                 </div>
               </div>
-              <div class="flex-1 flex items-center pr-2 border-b md:border-b-0 md:border-r border-slate-100"><svg
+              <div class="flex-1 relative flex items-center pr-2 border-b md:border-b-0 md:border-r border-slate-100"><svg
                   aria-hidden="true" class="lucide lucide-calendar text-gold-accent shrink-0 ml-3 mr-2" fill="none"
                   height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
@@ -352,8 +352,9 @@
                   <rect height="18" rx="2" width="18" x="3" y="4"></rect>
                   <path d="M3 10h18"></path>
                 </svg><input
-                  class="w-full py-3 bg-transparent text-xs text-deep-navy focus:outline-none"
-                  type="month" min="2026-06" /></div><button
+                  id="ht-date-input"
+                  class="w-full py-3 bg-transparent text-xs text-deep-navy placeholder-slate-400 focus:outline-none cursor-pointer select-none"
+                  type="text" readonly placeholder="When do you want to travel?" /></div><button
                 class="bg-deep-navy text-pure-white px-8 py-3.5 md:py-3 font-sans text-xs tracking-widest uppercase font-extrabold hover:bg-gold-accent hover:text-deep-navy transition-colors shadow-sm cursor-pointer"
                 type="submit">Search Destinations</button>
             </form>

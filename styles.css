@@ -3444,3 +3444,143 @@ footer {
   .foot-logo  { height: 42px; }
   .atol-badge { height: 48px; margin-top: 0; }
 }
+
+/* ================================================================
+   CUSTOM MONTH PICKER
+   ================================================================ */
+
+.ht-month-picker {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: -1px;
+  min-width: 268px;
+  background: linear-gradient(145deg, #0e1d28 0%, #12232f 50%, #1a3347 100%);
+  border: 1px solid rgba(238, 145, 49, 0.28);
+  border-radius: 14px;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.55),
+    0 8px 24px rgba(18, 35, 47, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  z-index: 9999;
+  animation: ht-mp-in 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes ht-mp-in {
+  from { opacity: 0; transform: translateY(6px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.ht-mp-stripe {
+  height: 3px;
+  background: linear-gradient(90deg, var(--color-gold-accent, #ee9131), #f5c06a, var(--color-gold-accent, #ee9131));
+  background-size: 200% 100%;
+  animation: ht-mp-shimmer 2.5s linear infinite;
+}
+
+@keyframes ht-mp-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.ht-mp-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 18px 13px;
+}
+
+.ht-mp-year-label {
+  color: #fff;
+  font-family: var(--font-serif, Georgia, serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.ht-mp-nav {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.65);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.18s;
+  font-size: 14px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.ht-mp-nav:hover {
+  background: var(--color-gold-accent, #ee9131);
+  border-color: var(--color-gold-accent, #ee9131);
+  color: #12232f;
+  transform: scale(1.08);
+}
+
+.ht-mp-nav:disabled,
+.ht-mp-nav[disabled] {
+  opacity: 0.25;
+  cursor: default;
+  transform: none;
+}
+
+.ht-mp-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 0 14px;
+}
+
+.ht-mp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 14px 14px 18px;
+}
+
+.ht-mp-btn {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  color: rgba(255, 255, 255, 0.78);
+  padding: 11px 4px;
+  font-family: var(--font-sans, sans-serif);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.12s, box-shadow 0.15s;
+  text-align: center;
+}
+
+.ht-mp-btn:hover:not(.ht-mp-past) {
+  background: rgba(238, 145, 49, 0.16);
+  border-color: rgba(238, 145, 49, 0.45);
+  color: var(--color-gold-accent, #ee9131);
+  transform: translateY(-2px);
+}
+
+.ht-mp-btn.ht-mp-past {
+  opacity: 0.22;
+  cursor: default;
+}
+
+.ht-mp-btn.ht-mp-selected {
+  background: var(--color-gold-accent, #ee9131);
+  color: #12232f;
+  font-weight: 700;
+  border-color: var(--color-gold-accent, #ee9131);
+  box-shadow: 0 4px 16px rgba(238, 145, 49, 0.4);
+  transform: none;
+}
+
+.ht-mp-btn.ht-mp-current:not(.ht-mp-selected) {
+  border-color: rgba(238, 145, 49, 0.5);
+  color: var(--color-gold-accent, #ee9131);
+}
