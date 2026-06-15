@@ -3382,3 +3382,65 @@ footer {
   width: auto;
   object-fit: contain
 }
+
+/* ================================================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES
+   These rules are outside @layer so they override all Tailwind
+   utility classes above without needing !important.
+   ================================================================ */
+
+/* ---------- Mobile (≤ 767px) ---------- */
+@media (max-width: 767px) {
+
+  /* Pin all vw-unit font classes to readable minimums */
+  .text-\[0\.7vw\]  { font-size: 10px; }
+  .text-\[0\.8vw\]  { font-size: 11px; }
+  .text-\[0\.85vw\] { font-size: 11px; }
+  .text-\[0\.9vw\]  { font-size: 12px; }
+  .text-\[0\.95vw\] { font-size: 13px; }
+  .text-\[1vw\]     { font-size: 14px; }
+  .text-\[1\.1vw\]  { font-size: 15px; }
+  .text-\[1\.2vw\]  { font-size: 15px; }
+  .text-\[1\.5vw\]  { font-size: 17px; }
+  .text-\[2vw\]     { font-size: 17px; }
+  .text-\[4vw\]     { font-size: clamp(24px, 7.5vw, 32px); }
+
+  /* Logo */
+  img[alt="Holiday Trolley"] { width: 110px; height: auto; }
+
+  /* Hero search form — reduce bottom offset so it doesn't overflow on small screens */
+  #hero-search { bottom: 0.5rem; }
+
+  /* Hide the header Enquire Now button — the mobile menu already has enquiry links */
+  #main-header .ml-\[1vw\] { display: none; }
+
+  /* Footer logo & protection badge */
+  .foot-logo  { height: 38px; }
+  .atol-badge { height: 44px; margin-top: 0; }
+
+  /* Payment icons: sensible size when wrapping on narrow screens */
+  .pays img { width: auto; max-height: 28px; }
+}
+
+/* ---------- Tablet (768px – 1023px) ---------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  /* vw-unit fonts: still too small at these viewport widths */
+  .text-\[0\.7vw\]  { font-size: 10px; }
+  .text-\[0\.8vw\]  { font-size: 12px; }
+  .text-\[0\.85vw\] { font-size: 12px; }
+  .text-\[0\.9vw\]  { font-size: 13px; }
+  .text-\[0\.95vw\] { font-size: 13px; }
+  .text-\[1vw\]     { font-size: 14px; }
+  .text-\[1\.1vw\]  { font-size: 15px; }
+  .text-\[1\.2vw\]  { font-size: 16px; }
+  .text-\[1\.5vw\]  { font-size: 17px; }
+  .text-\[2vw\]     { font-size: 20px; }
+
+  /* Logo */
+  img[alt="Holiday Trolley"] { width: 130px; height: auto; }
+
+  /* Footer logos */
+  .foot-logo  { height: 42px; }
+  .atol-badge { height: 48px; margin-top: 0; }
+}

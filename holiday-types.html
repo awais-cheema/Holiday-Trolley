@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="Assets/favicon.png" />
+  <title>Holidays By Type — Holiday Trolley</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .type-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 2rem; }
+    @media (min-width: 640px)  { .type-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 1024px) { .type-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 1280px) { .type-grid { grid-template-columns: repeat(4, 1fr); } }
+    .type-card { display: flex; flex-direction: column; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.10); background: #fff; transition: box-shadow 0.3s, transform 0.3s; }
+    .type-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.18); transform: translateY(-4px); }
+    .type-card img { width: 100%; height: 240px; object-fit: cover; display: block; transition: transform 0.5s; }
+    .type-card:hover img { transform: scale(1.05); }
+    .type-card-img { overflow: hidden; }
+    .type-card-body { padding: 1.5rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+    .type-card-price { display: inline-block; background: #EE9131; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.3rem 1rem; border-radius: 99px; letter-spacing: 0.05em; }
+    .type-card-title { font-family: 'Noto Serif', serif; font-size: 1.2rem; color: #12232F; font-weight: 600; line-height: 1.3; }
+    .type-card-desc { font-size: 0.82rem; color: #5a7080; line-height: 1.65; flex: 1; }
+    .type-card-cta { display: inline-block; background: #12232F; color: #fff; text-align: center; padding: 0.7rem 1.5rem; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: background 0.2s, color 0.2s; }
+    .type-card-cta:hover { background: #EE9131; color: #fff; }
+  </style>
+</head>
+
+<body>
+  <div id="root">
+    <div class="min-h-screen flex flex-col justify-between bg-surface selection:bg-gold-accent selection:text-deep-navy">
+
+      <!-- Top bar -->
+      <div class="w-full bg-gold-accent/80 py-2.5 px-4 text-center shrink-0">
+        <p class="text-[#12232F] font-bold text-[0.9vw] tracking-wide">Book with confidence. Call today — we'll answer in under a minute.</p>
+      </div>
+
+      <!-- Header -->
+      <header class="sticky top-0 z-50 transition-all duration-300 border-b py-[3vh] bg-pure-white shadow-sm py-5 border-outline-variant" id="main-header">
+        <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <a class="flex items-center" href="index.html"><img alt="Holiday Trolley" class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" /></a>
+          <nav class="hidden lg:flex gap-12 items-center">
+            <a href="index.html" class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Home</a>
+            <a href="destinations.html" class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Destinations</a>
+            <a href="https://holidaytrolley.co.uk/wp/tour/" class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Tours</a>
+            <a href="about.html" class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">About</a>
+            <a href="contact.html" class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Contact</a>
+          </nav>
+          <div class="flex items-center gap-4">
+            <div class="hidden xl:flex items-center">
+              <a class="flex items-center gap-3 group" href="tel:03332422222">
+                <svg aria-hidden="true" class="lucide lucide-phone-call text-[#EE9131] group-hover:text-[#EE9131] transition-colors shrink-0" fill="none" height="36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24" width="36" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2a9 9 0 0 1 9 9"></path><path d="M13 6a5 5 0 0 1 5 5"></path>
+                  <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+                </svg>
+                <div class="flex flex-col leading-tight">
+                  <span class="text-deep-navy/50 text-[0.7vw]">9am - 11pm</span>
+                  <span class="text-deep-navy font-extrabold text-[1vw] tracking-wide group-hover:text-gold-accent transition-colors">03332 422 222</span>
+                </div>
+              </a>
+            </div>
+            <div class="flex gap-2 ml-[1vw]">
+              <a href="contact.html" class="bg-gold-accent text-pure-white px-8 py-3 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-sm">Enquire Now</a>
+            </div>
+            <button aria-label="Open navigation menu" class="lg:hidden p-2 text-deep-navy hover:text-gold-accent transition-colors">
+              <svg aria-hidden="true" class="lucide lucide-menu" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 5h16"></path><path d="M4 12h16"></path><path d="M4 19h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="lg:hidden absolute top-full left-0 w-full bg-pure-white border-b border-outline-variant shadow-xl p-6" id="mobile-menu" style="display:none">
+          <div class="flex flex-col gap-4">
+            <a href="index.html" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Home</a>
+            <a href="destinations.html" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Destinations</a>
+            <a href="https://holidaytrolley.co.uk/wp/tour/" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Tours</a>
+            <a href="about.html" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">About</a>
+            <a href="contact.html" class="text-left text-deep-navy font-serif text-lg py-2 border-b border-slate-100">Contact</a>
+            <div class="flex flex-col gap-3 pt-4">
+              <a class="flex items-center gap-2 text-deep-navy font-bold py-2 justify-center border border-slate-200" href="tel:03332422222">Call 03332 422 222</a>
+              <a href="contact.html" class="w-full bg-gold-accent text-pure-white py-3 font-sans text-xs tracking-widest uppercase font-bold text-center block">Start Bespoke Enquiry</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Hero -->
+      <section class="relative bg-deep-navy overflow-hidden" style="height: 55vh; min-height: 360px;">
+        <img src="Assets/Holiday Types/luxury_holiday_deals_a31d3b883f.jpg" alt="Holidays By Type"
+          class="absolute inset-0 w-full h-full object-cover select-none" style="filter: brightness(0.38);" />
+        <div class="absolute inset-0 hero-gradient"></div>
+        <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6">
+          <div class="max-w-3xl space-y-6">
+            <div class="flex items-center justify-center gap-3">
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+              <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Distinctive Travel Profiles</span>
+              <span class="block w-10 h-px bg-gold-accent/70"></span>
+            </div>
+            <h1 class="text-[4vw] md:text-[4vw] font-serif text-pure-white leading-none font-light uppercase tracking-tight" style="text-shadow: rgba(0,0,0,0.45) 0px 2px 24px;">Holidays By Type</h1>
+            <p class="text-[1.4vw] text-pure-white/90 max-w-xl mx-auto font-sans font-light leading-relaxed">Whatever kind of holiday you dream of, we craft it to perfection — tailored, luxurious, and unforgettable.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intro -->
+      <section class="py-16 bg-soft-cream">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center space-y-4">
+          <span class="text-[0.625rem] font-bold text-gold-accent uppercase tracking-widest block">Find Your Perfect Escape</span>
+          <h2 class="text-2xl md:text-4xl font-serif text-deep-navy font-medium">Every Holiday, Expertly Crafted</h2>
+          <p class="text-sm text-on-surface-variant max-w-2xl mx-auto leading-relaxed">From sun-drenched beaches to thrilling safaris and romantic honeymoons, our specialists design every trip around you. Browse our holiday types below and let us build your perfect getaway.</p>
+        </div>
+      </section>
+
+      <!-- Holiday Types Grid -->
+      <section class="py-16 bg-pure-white">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+          <div class="type-grid">
+
+            <!-- Multi Centre -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/multicentre_holiday_deals_a70efadb7d.jpg" alt="Multi Centre Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £549 pp</span>
+                <h3 class="type-card-title">Multi Centre Holidays</h3>
+                <p class="type-card-desc">Combine two or more breathtaking destinations into one seamless journey. Experience the highlights of different regions without ever having to choose between them.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Safari -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/safari_holiday_deals_519c3bdd2f.jpg" alt="Safari Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £1,799 pp</span>
+                <h3 class="type-card-title">Safari Holidays</h3>
+                <p class="type-card-desc">Witness Africa's magnificent wildlife up close. From the vast Masai Mara to Zanzibar's pristine shores, our expert-guided safaris create memories that last a lifetime.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Family -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/family_holiday_deals_83e75ed206.jpg" alt="Family Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £1,299 pp</span>
+                <h3 class="type-card-title">Family Holidays</h3>
+                <p class="type-card-desc">Create unforgettable family memories with our carefully curated packages. Fun-filled adventures designed for all ages, with comfort and safety at the forefront.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Grand Prix -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/grand_prix_packages_358b7647bf.jpg" alt="Grand Prix Packages" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £1,499 pp</span>
+                <h3 class="type-card-title">Grand Prix™ Packages</h3>
+                <p class="type-card-desc">Experience the thrill of Formula 1 from the world's most iconic circuits. Premium packages combining race tickets, luxury accommodation, and seamless transfers.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- All-Inclusive -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/all_inclusive_holiday_deals_9d7fc6afba.jpg" alt="All-Inclusive Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £1,299 pp</span>
+                <h3 class="type-card-title">All-Inclusive Holidays</h3>
+                <p class="type-card-desc">Relax completely knowing everything is taken care of. Meals, drinks, entertainment — all included so you can focus entirely on enjoying your holiday.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Honeymoon -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/honeymoon_holiday_deals_3e9b529ec0.jpg" alt="Honeymoon Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £2,499 pp</span>
+                <h3 class="type-card-title">Honeymoon Holidays</h3>
+                <p class="type-card-desc">Celebrate your love story in paradise. Romantic escapes to the world's most stunning destinations, tailored for newlyweds seeking the perfect start to married life.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Luxury -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/luxury_holiday_deals_a31d3b883f.jpg" alt="Luxury Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £2,999 pp</span>
+                <h3 class="type-card-title">Luxury Holidays</h3>
+                <p class="type-card-desc">Indulge in five-star excellence at the world's most exclusive resorts. Private villas, personalised butler service, and unparalleled experiences await.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Beach -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/beach_holiday_deals_5d72aab10e.jpg" alt="Beach Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £899 pp</span>
+                <h3 class="type-card-title">Beach Holidays</h3>
+                <p class="type-card-desc">Sun-soaked shores, crystal-clear waters, and pure relaxation. From the Maldives to Thailand, discover our finest beach destinations at exceptional value.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Villa -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/villa_holidays_8056998ce6.jpg" alt="Villa Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £1,199 pp</span>
+                <h3 class="type-card-title">Villa Holidays</h3>
+                <p class="type-card-desc">Your own private sanctuary. Exclusive villa stays with private pools, chef services, and bespoke amenities — the ultimate in holiday privacy and luxury.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+            <!-- Adult-Only -->
+            <div class="type-card">
+              <div class="type-card-img">
+                <img src="Assets/Holiday Types/adults_only_holiday_deals_150074ad61.jpg" alt="Adult-Only Holidays" />
+              </div>
+              <div class="type-card-body">
+                <span class="type-card-price">from £1,399 pp</span>
+                <h3 class="type-card-title">Adult-Only Holidays</h3>
+                <p class="type-card-desc">Serene, sophisticated escapes exclusively for adults. Peaceful retreats where you can unwind completely in premium adult-only resorts around the world.</p>
+                <a href="contact.html" class="type-card-cta">Enquire Now</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-20 bg-deep-navy text-center text-pure-white">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto space-y-6">
+          <div class="flex items-center justify-center gap-3">
+            <span class="block w-10 h-px bg-gold-accent/70"></span>
+            <span class="text-[0.8vw] font-bold text-gold-accent tracking-[0.3em] uppercase">Start Your Journey</span>
+            <span class="block w-10 h-px bg-gold-accent/70"></span>
+          </div>
+          <h2 class="text-3xl md:text-4xl font-serif text-pure-white font-medium">Not sure which holiday type suits you?</h2>
+          <p class="text-[1vw] text-pure-white/70 max-w-xl mx-auto font-light leading-relaxed">Our expert consultants are here to help — no obligation, just honest advice from people who truly love travel.</p>
+          <div class="flex items-center justify-center gap-4 flex-wrap">
+            <a href="contact.html" class="bg-gold-accent text-pure-white px-10 py-4 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:bg-gold-hover transition-all duration-300 shadow-lg inline-block">Enquire Now</a>
+            <a href="tel:03332422222" class="border border-pure-white/40 text-pure-white px-10 py-4 font-sans text-[0.8vw] tracking-widest uppercase font-bold hover:border-gold-accent hover:text-gold-accent transition-all duration-300 inline-block">Call 03332 422 222</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="wrap max-w-container-max mx-auto">
+          <div class="foot-grid">
+            <div class="foot-col">
+              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley">
+              <p>At Holiday Trolley, we pride ourselves on being one of the leading travel service providers. We specialize in creating tailored holiday packages designed to turn your dream getaway into reality.</p>
+            </div>
+            <div class="foot-col">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="destinations.html">Destinations</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="https://holidaytrolley.co.uk/wp/">Terms &amp; Conditions</a></li>
+                <li><a href="https://holidaytrolley.co.uk/wp/">Booking Conditions</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Contact</h4>
+              <ul>
+                <li class="row"><span>Location</span><span>100 Avebury Boulevard, Milton Keynes, MK9 1FH</span></li>
+                <li class="row"><span>Phone</span><a href="tel:03332422222">03332 422 222</a></li>
+                <li class="row"><span>Email</span><a href="mailto:info@holidaytrolley.co.uk">info@holidaytrolley.co.uk</a></li>
+              </ul>
+            </div>
+            <div class="foot-col">
+              <h4>Follow Us</h4>
+              <ul style="margin-bottom:32px">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Facebook</a></li>
+              </ul>
+              <img class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL &amp; IATA Protected">
+            </div>
+          </div>
+          <div class="legal">
+            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no- 218057223.</h5>
+            <p>All the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not apply to all flights. Holiday Trolley will provide you with information on the protection that applies in the case of each flight before you make your booking. If you do not receive an ATOL Certificate, then the booking will not be ATOL protected. Please see our booking conditions for information, or for more information about financial protection and the ATOL Certificate go to: www.caa.co.uk.</p>
+          </div>
+        </div>
+        <div class="botbar">
+          <div class="wrap botbar-in">
+            <p>Copyright &copy; 2026 Holiday Trolley UK. All rights reserved.</p>
+            <div class="pays">
+              <img src="Assets/Payment-Methods.webp" alt="Payment Methods">
+            </div>
+          </div>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.querySelector('[aria-label="Open navigation menu"]');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.style.display = mobileMenu.style.display === 'none' ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+
+</html>
