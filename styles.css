@@ -643,7 +643,7 @@
   }
 
   .-mt-24 {
-    margin-top: calc(var(--spacing) * -24)
+    margin-top: calc(var(--spacing) * -55)
   }
 
   .mt-0\.5 {
@@ -3396,7 +3396,7 @@ footer {
   .text-\[0\.7vw\]  { font-size: 10px; }
   .text-\[0\.8vw\]  { font-size: 11px; }
   .text-\[0\.85vw\] { font-size: 11px; }
-  .text-\[0\.9vw\]  { font-size: 12px; }
+  .text-\[0\.9vw\]  { font-size: 2.4vw; }
   .text-\[0\.95vw\] { font-size: 13px; }
   .text-\[1vw\]     { font-size: 14px; }
   .text-\[1\.1vw\]  { font-size: 15px; }
@@ -3406,7 +3406,7 @@ footer {
   .text-\[4vw\]     { font-size: clamp(24px, 7.5vw, 32px); }
 
   /* Logo */
-  img[alt="Holiday Trolley"] { width: 110px; height: auto; }
+  img[alt="Holiday Trolley"] { width: 40vw; height: auto; }
 
   /* Hero search form — reduce bottom offset so it doesn't overflow on small screens */
   #hero-search { bottom: 0.5rem; }
