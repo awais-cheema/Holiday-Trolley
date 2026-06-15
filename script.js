@@ -297,14 +297,6 @@
       if (t === 'Explore Day Timeline') b.addEventListener('click', function () { openModal('modal-detail'); });
     });
 
-    // Top Holidays cards -> detail dialog
-    var listings = $('#holiday-listings-section [data-carousel-track]');
-    if (listings) {
-      Array.prototype.slice.call(listings.children).forEach(function (card) {
-        card.addEventListener('click', function () { openModal('modal-detail'); });
-      });
-    }
-
     // Detail dialog internal actions
     var detail = $('#modal-detail');
     if (detail) {
