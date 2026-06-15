@@ -177,7 +177,7 @@
       });
     })();
 
-    /* ---------- Search suggestions ---------- */
+    /* ---------- Search suggestions + form submit ---------- */
     (function suggestions() {
       var input = $('input[placeholder="Where do you want to go?"]');
       var box = $('#search-suggestions');
@@ -201,6 +201,42 @@
       });
       document.addEventListener('click', function (e) {
         if (!box.contains(e.target) && e.target !== input) box.style.display = 'none';
+      });
+
+      var tourMap = [
+        { keys: ['philippines'],         url: 'https://holidaytrolley.co.uk/wp/tour/tropical-beauty-of-the-philippines-10-nights/' },
+        { keys: ['maldives'],            url: 'https://holidaytrolley.co.uk/wp/tour/11-days-sri-lankan-safari-maldives/' },
+        { keys: ['sri lanka'],           url: 'https://holidaytrolley.co.uk/wp/tour/11-days-sri-lankan-safari-maldives/' },
+        { keys: ['south africa'],        url: 'https://holidaytrolley.co.uk/wp/tour/10-night-south-africa-safari-zanzibar-beach-getaway/' },
+        { keys: ['zanzibar'],            url: 'https://holidaytrolley.co.uk/wp/tour/11-day-signature-luxury-safari-island-getaway-kenya-zanzibar/' },
+        { keys: ['kenya'],               url: 'https://holidaytrolley.co.uk/wp/tour/luxury-safari-island-escape-maasai-mara-seychelles/' },
+        { keys: ['seychelles'],          url: 'https://holidaytrolley.co.uk/wp/tour/luxury-safari-island-escape-maasai-mara-seychelles/' },
+        { keys: ['las vegas', 'vegas'],  url: 'https://holidaytrolley.co.uk/wp/tour/new-year-in-las-vegas-cancun-7-nights/' },
+        { keys: ['cancun'],              url: 'https://holidaytrolley.co.uk/wp/tour/new-year-in-las-vegas-cancun-7-nights/' },
+        { keys: ['vietnam', 'hanoi', 'ha long', 'phu quoc', 'ho chi minh'], url: 'https://holidaytrolley.co.uk/wp/tour/vietnam-10-night-adventure-hanoi-ha-long-bay-phu-quoc-ho-chi-minh-city/' },
+        { keys: ['singapore', 'bali', 'kuala lumpur', 'kl'],                url: 'https://holidaytrolley.co.uk/wp/tour/10-night-singapore-bali-kuala-lumpur-adventure/' },
+        { keys: ['thailand', 'phuket', 'khao lak'],                         url: 'https://holidaytrolley.co.uk/wp/tour/10-night-thailand-twin-escape-phuket-khao-lak/' }
+      ];
+
+      var form = input.closest('form');
+      if (!form) return;
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var dest = input.value.trim().toLowerCase();
+        var url = 'https://holidaytrolley.co.uk/wp/tour/';
+        if (dest) {
+          for (var i = 0; i < tourMap.length; i++) {
+            var entry = tourMap[i];
+            for (var j = 0; j < entry.keys.length; j++) {
+              if (dest.indexOf(entry.keys[j]) !== -1) {
+                url = entry.url;
+                break;
+              }
+            }
+            if (url !== 'https://holidaytrolley.co.uk/wp/tour/') break;
+          }
+        }
+        window.location.href = url;
       });
     })();
 
