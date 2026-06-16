@@ -1,16 +1,22 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Holiday Trolley – Award-winning tailor-made luxury holidays since 1987. ATOL Protected No. 11965. Beach, safari, honeymoon and multi-centre holidays crafted by UK travel experts." />
+  <title>Holiday Trolley – Luxury Tailor-Made Holidays | ATOL Protected No. 11965</title>
   <link rel="icon" type="image/png" href="Assets/favicon.png" />
-  <title>Holiday Trolley</title>
+  <!-- DNS prefetch + preconnect for fonts -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap"
-    rel="stylesheet" />
+  <!-- Preload LCP hero image (first visible slide) -->
+  <link rel="preload" as="image" href="Assets/Hero Imgs/Singapore-Hero.jpg" fetchpriority="high" />
+  <!-- Non-blocking Google Fonts (eliminates render-blocking request chain) -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Noto+Serif:wght@500;600;700&display=swap" /></noscript>
   <link rel="stylesheet" href="styles.css" />
 </head>
 
@@ -29,7 +35,7 @@
           <div
             class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
             <a class="flex items-center" href="index.html"><img alt="Holiday Trolley"
-                class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" /></a>
+                class="w-[12vw] md:w-[12vw] w-auto object-contain" src="Assets/Logo.webp" width="160" height="52" /></a>
             <nav class="hidden lg:flex gap-12 items-center"><a href="index.html"
                 class="text-gold-accent font-semibold relative after:absolute after:bottom-[-6px] after:left-0 after:w-full after:h-[2px] after:bg-gold-accent font-sans text-[0.8vw] tracking-widest uppercase">Home</a><a href="destinations.html"
                 class="text-deep-navy hover:text-gold-accent transition-colors duration-300 font-sans text-[0.8vw] tracking-widest uppercase font-semibold">Destinations</a><a href="https://holidaytrolley.co.uk/wp/tour/"
@@ -94,7 +100,7 @@
         </header>
         <section class="relative flex-1 bg-deep-navy" data-hero="1">
           <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
-            <div class="absolute inset-0 overflow-hidden"><img alt="Maldives"
+            <div class="absolute inset-0 overflow-hidden"><img loading="lazy" decoding="async" alt="Maldives"
                 class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
                 src="Assets/Hero Imgs/Maldives-Hero.jpg" />
               <div class="absolute inset-0 hero-gradient"></div>
@@ -127,7 +133,7 @@
           <div class="absolute inset-0 transition-opacity duration-1000 opacity-100 z-10">
             <div class="absolute inset-0 overflow-hidden"><img alt="Singapore"
                 class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
-                src="Assets/Hero Imgs/Singapore-Hero.jpg" />
+                src="Assets/Hero Imgs/Singapore-Hero.jpg" fetchpriority="high" loading="eager" decoding="sync" />
               <div class="absolute inset-0 hero-gradient"></div>
             </div>
             <div class="absolute inset-0 flex flex-col justify-center items-center text-center px-6 -mt-24 md:-mt-32">
@@ -156,7 +162,7 @@
             </div>
           </div>
           <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
-            <div class="absolute inset-0 overflow-hidden"><img alt="Sri Lanka"
+            <div class="absolute inset-0 overflow-hidden"><img loading="lazy" decoding="async" alt="Sri Lanka"
                 class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
                 src="Assets/Hero Imgs/SriLanka-Hero.jpg" />
               <div class="absolute inset-0 hero-gradient"></div>
@@ -187,7 +193,7 @@
             </div>
           </div>
           <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
-            <div class="absolute inset-0 overflow-hidden"><img alt="Malaysia"
+            <div class="absolute inset-0 overflow-hidden"><img loading="lazy" decoding="async" alt="Malaysia"
                 class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
                 src="Assets/Hero Imgs/Malaysia-Hero.jpg" />
               <div class="absolute inset-0 hero-gradient"></div>
@@ -218,7 +224,7 @@
             </div>
           </div>
           <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
-            <div class="absolute inset-0 overflow-hidden"><img alt="Kenya"
+            <div class="absolute inset-0 overflow-hidden"><img loading="lazy" decoding="async" alt="Kenya"
                 class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
                 src="Assets/Hero Imgs/Kenya-Hero.jpg" />
               <div class="absolute inset-0 hero-gradient"></div>
@@ -249,7 +255,7 @@
             </div>
           </div>
           <div class="absolute inset-0 transition-opacity duration-1000 opacity-0 z-0 pointer-events-none">
-            <div class="absolute inset-0 overflow-hidden"><img alt="Mexico"
+            <div class="absolute inset-0 overflow-hidden"><img loading="lazy" decoding="async" alt="Mexico"
                 class="w-full h-full object-cover brightness-[0.65] select-none" referrerpolicy="no-referrer"
                 src="Assets/Hero Imgs/Mexico-Herp.jpg" />
               <div class="absolute inset-0 hero-gradient"></div>
@@ -373,9 +379,8 @@
               <path d="m9 12 2 2 4-4"></path>
             </svg>
             <div>
-              <h3 class="font-serif font-semibold text-[1.1vw] text-deep-navy">ATOL &amp; ABTA Protected</h3>
-              <p class="text-[0.9vw] text-on-surface-variant mt-1">Dual licensing insurance means your flight money is
-                100% safeguarded.</p>
+              <h3 class="font-serif font-semibold text-[1.1vw] text-deep-navy">ATOL Protected (No. 11965)</h3>
+              <p class="text-[0.9vw] text-on-surface-variant mt-1">ATOL protection means your flight money is$1100% safeguarded.</p>
             </div>
           </div>
           <div class="flex gap-6 items-start"><svg aria-hidden="true"
@@ -438,7 +443,7 @@
             <div class="flex gap-6 overflow-x-auto scroll-smooth pb-2" data-carousel-track="1"
               style="scrollbar-width: none;">
               <a href="https://holidaytrolley.co.uk/wp/tour/luxury-safari-island-escape-maasai-mara-seychelles/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="Luxury Safari &amp; Island Escape – Maasai Mara &amp; Seychelles" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Kenya-1.jpg" />
+                <img loading="lazy" decoding="async" alt="Luxury Safari &amp; Island Escape – Maasai Mara &amp; Seychelles" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Kenya-1.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £500</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£3,199</span><span class="block text-white font-bold text-[1vw]">from £2,699pp</span></div>
@@ -451,7 +456,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/10-night-thailand-twin-escape-phuket-khao-lak/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="10-Night Thailand Twin Escape – Phuket &amp; Khao Lak" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Thailand.jpg" />
+                <img loading="lazy" decoding="async" alt="10-Night Thailand Twin Escape – Phuket &amp; Khao Lak" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Thailand.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £200</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£999</span><span class="block text-white font-bold text-[1vw]">from £799pp</span></div>
@@ -464,7 +469,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/11-days-sri-lankan-safari-maldives/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="11 Days Sri Lankan Safari &amp; Maldives" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Maldives.avif" />
+                <img loading="lazy" decoding="async" alt="11 Days Sri Lankan Safari &amp; Maldives" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Maldives.avif" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £400</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£2,775</span><span class="block text-white font-bold text-[1vw]">from £2,375pp</span></div>
@@ -477,7 +482,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/vietnam-10-night-adventure-hanoi-ha-long-bay-phu-quoc-ho-chi-minh-city/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="Vietnam 10-Night Adventure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Veitnam.jpg" />
+                <img loading="lazy" decoding="async" alt="Vietnam 10-Night Adventure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Veitnam.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £200</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£1,299</span><span class="block text-white font-bold text-[1vw]">from £1,099pp</span></div>
@@ -490,7 +495,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/10-night-south-africa-safari-zanzibar-beach-getaway/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="10-Night South Africa Safari &amp; Zanzibar Beach Getaway" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" />
+                <img loading="lazy" decoding="async" alt="10-Night South Africa Safari &amp; Zanzibar Beach Getaway" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £400</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£2,599</span><span class="block text-white font-bold text-[1vw]">from £2,199pp</span></div>
@@ -503,7 +508,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/14-night-philippines-adventure-discover-paradise/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="14-Night Philippines Adventure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80" />
+                <img loading="lazy" decoding="async" alt="14-Night Philippines Adventure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1559827291-72ee739d0d9a?auto=format&fit=crop&w=800&q=80" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £300</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£1,599</span><span class="block text-white font-bold text-[1vw]">from £1,299pp</span></div>
@@ -516,7 +521,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/11-day-signature-luxury-safari-island-getaway-kenya-zanzibar/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="11-Day Signature Luxury Safari &amp; Island Getaway – Kenya &amp; Zanzibar" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Tanzania.jpg" />
+                <img loading="lazy" decoding="async" alt="11-Day Signature Luxury Safari &amp; Island Getaway – Kenya &amp; Zanzibar" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Tanzania.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £400</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£2,399</span><span class="block text-white font-bold text-[1vw]">from £1,999pp</span></div>
@@ -529,7 +534,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/10-night-singapore-bali-kuala-lumpur-adventure/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="10-Night Singapore, Bali &amp; Kuala Lumpur Adventure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Bali.jpg" />
+                <img loading="lazy" decoding="async" alt="10-Night Singapore, Bali &amp; Kuala Lumpur Adventure" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="Assets/Destinations/Bali.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £200</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£1,399</span><span class="block text-white font-bold text-[1vw]">from £1,199pp</span></div>
@@ -542,7 +547,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/new-year-in-las-vegas-cancun-7-nights/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="New Year in Las Vegas &amp; Cancun – 7 Nights" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=800&q=80" />
+                <img loading="lazy" decoding="async" alt="New Year in Las Vegas &amp; Cancun – 7 Nights" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?auto=format&fit=crop&w=800&q=80" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £300</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£1,999</span><span class="block text-white font-bold text-[1vw]">from £1,699pp</span></div>
@@ -555,7 +560,7 @@
                 </div>
               </a>
               <a href="https://holidaytrolley.co.uk/wp/tour/tropical-beauty-of-the-philippines-10-nights/" class="relative flex-none w-[78vw] sm:w-[44vw] md:w-[30vw] lg:w-[calc(25%-18px)] h-[520px] rounded-2xl overflow-hidden group shadow-md">
-                <img alt="Tropical Beauty of the Philippines 10-Nights" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdde86?auto=format&fit=crop&w=800&q=80" />
+                <img loading="lazy" decoding="async" alt="Tropical Beauty of the Philippines 10-Nights" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerpolicy="no-referrer" src="https://images.unsplash.com/photo-1518509562904-e7ef99cdde86?auto=format&fit=crop&w=800&q=80" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                 <div class="absolute top-3 left-3 right-3 flex justify-between items-start z-10"><span class="inline-flex items-center gap-1.5 bg-gold-accent text-black text-[0.8vw] font-bold px-3 py-1.5 rounded-full shadow-sm"><svg aria-hidden="true" class="lucide lucide-tag" fill="none" height="11" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24" width="11" xmlns="http://www.w3.org/2000/svg"><path d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z"></path><circle cx="7.5" cy="7.5" fill="currentColor" r=".5"></circle></svg>Save £300</span>
                   <div class="text-right"><span class="block text-white/55 text-[0.85vw] line-through">£1,899</span><span class="block text-white font-bold text-[1vw]">from £1,599pp</span></div>
@@ -628,7 +633,7 @@
                 class="border border-white/20 hover:border-gold-accent hover:text-gold-accent px-8 py-3.5 font-sans text-xs tracking-widest uppercase font-bold transition-colors text-center cursor-pointer">Inquire
                 Instantly</a></div>
           </div>
-          <div class="relative h-96 w-full shadow-2xl overflow-hidden group"><img alt="Golden Sunset Safari Silhouettes"
+          <div class="relative h-96 w-full shadow-2xl overflow-hidden group"><img loading="lazy" decoding="async" alt="Golden Sunset Safari Silhouettes"
               class="w-full h-full object-cover select-none group-hover:scale-105 transition-transform duration-700 h-full"
               referrerpolicy="no-referrer"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjW1B55tpA86v1Fdmw0QtZMt_ol9NpS9O-36XaLaIUm4L6u9OdxXDkMQO41HmJ18N7QUIOYyUCqCO27d5Cpa8pYloXspv0zOPbDAsp-iGcGYtAHAXgIcHYqI7noTw3dThS23oQUigiciwhyjDsW8flV0mLjw4tadtv7UVZMQi-5LZLeUk6BcwJdV5bdqLZjyeussbz5DraoUCnB_bVJS-NB67rFzcimOsecGMe25p3IT-M_WHJofKYHcUVktqjgTxxfg2r_VaiZmw" /><span
@@ -648,7 +653,7 @@
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
-              <img alt="Tanzania"
+              <img loading="lazy" decoding="async" alt="Tanzania"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer" src="Assets/Destinations/Tanzania.jpg" />
               <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
@@ -663,7 +668,7 @@
             </a>
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
-              <img alt="Maldives"
+              <img loading="lazy" decoding="async" alt="Maldives"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer" src="Assets/Destinations/Maldives.avif" />
               <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
@@ -679,7 +684,7 @@
             </a>
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg md:col-span-2">
-              <img alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              <img loading="lazy" decoding="async" alt="Bali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer" src="Assets/Destinations/Bali.jpg" />
               <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
               <div class="absolute bottom-5 left-5 right-5 flex justify-between items-baseline text-pure-white">
@@ -693,7 +698,7 @@
             </a>
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
-              <img alt="Vietnam"
+              <img loading="lazy" decoding="async" alt="Vietnam"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer" src="Assets/Destinations/Veitnam.jpg" />
               <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
@@ -708,7 +713,7 @@
             </a>
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
-              <img alt="Thailand"
+              <img loading="lazy" decoding="async" alt="Thailand"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer" src="Assets/Destinations/Thailand.jpg" />
               <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
@@ -723,7 +728,7 @@
             </a>
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
-              <img alt="Singapore"
+              <img loading="lazy" decoding="async" alt="Singapore"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer"
                 src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?auto=format&amp;fit=crop&amp;w=800&amp;q=80" />
@@ -739,7 +744,7 @@
             </a>
             <a href="destinations.html"
               class="relative group h-80 overflow-hidden cursor-pointer border border-outline-variant/20 shadow-xs hover:shadow-lg transition-all rounded-lg">
-              <img alt="Kenya"
+              <img loading="lazy" decoding="async" alt="Kenya"
                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 referrerpolicy="no-referrer" src="Assets/Destinations/Kenya-Cheetah.jpg" />
               <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-deep-navy/80"></div>
@@ -770,7 +775,7 @@
               style="scrollbar-width: none;">
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Multi Centre Holidays"
+                <img loading="lazy" decoding="async" alt="Multi Centre Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/multicentre_holiday_deals_a70efadb7d.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -782,7 +787,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Safari Holidays"
+                <img loading="lazy" decoding="async" alt="Safari Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/safari_holiday_deals_519c3bdd2f.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -794,7 +799,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Family Holidays"
+                <img loading="lazy" decoding="async" alt="Family Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/family_holiday_deals_83e75ed206.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -806,7 +811,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Grand Prix™ Packages"
+                <img loading="lazy" decoding="async" alt="Grand Prix™ Packages"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/grand_prix_packages_358b7647bf.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -818,7 +823,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="All-Inclusive Holidays"
+                <img loading="lazy" decoding="async" alt="All-Inclusive Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/all_inclusive_holiday_deals_9d7fc6afba.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -830,7 +835,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Honeymoon Holidays"
+                <img loading="lazy" decoding="async" alt="Honeymoon Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/honeymoon_holiday_deals_3e9b529ec0.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -842,7 +847,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Luxury Holidays"
+                <img loading="lazy" decoding="async" alt="Luxury Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/luxury_holiday_deals_a31d3b883f.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -854,7 +859,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Beach Holidays"
+                <img loading="lazy" decoding="async" alt="Beach Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/beach_holiday_deals_5d72aab10e.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -866,7 +871,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Villa Holidays"
+                <img loading="lazy" decoding="async" alt="Villa Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/villa_holidays_8056998ce6.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -878,7 +883,7 @@
               </a>
               <a href="holiday-types.html"
                 class="relative flex-none w-[70vw] sm:w-[42vw] md:w-[28vw] lg:w-[calc(25%-18px)] h-[540px] rounded-3xl overflow-hidden cursor-pointer group shadow-md">
-                <img alt="Adult-Only Holidays"
+                <img loading="lazy" decoding="async" alt="Adult-Only Holidays"
                   class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   referrerpolicy="no-referrer" src="Assets/Holiday Types/adults_only_holiday_deals_150074ad61.jpg" />
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
@@ -959,27 +964,9 @@
               <div
                 class="overflow-hidden transition-all duration-300 max-h-64 opacity-100 border-t border-outline-variant/20">
                 <p class="p-5 md:p-6 text-sm text-on-surface-variant leading-relaxed font-light">Yes, Holiday Trolley is
-                  ATOL-protected and holds a valid ATOL (Air Travel Organiser's Licence - 3517) issued by the UK Civil
+                  ATOL-protected and holds a valid ATOL (Air Travel Organiser's Licence - 11965) issued by the UK Civil
                   Aviation Authority. This protection helps safeguard your money and travel arrangements if your holiday
                   gets cancelled for any reason, ensuring you can book of absolute peace of mind.</p>
-              </div>
-            </div>
-            <div
-              class="border transition-all duration-300 border-outline-variant/40 bg-soft-cream/30 hover:border-gold-accent/50">
-              <button aria-expanded="false"
-                class="w-full flex items-center justify-between p-5 md:p-6 text-left focus:outline-none cursor-pointer"><span
-                  class="font-serif text-base md:text-lg font-medium text-deep-navy pr-4">Are Holiday Trolley members of
-                  ABTA?</span><svg aria-hidden="true"
-                  class="lucide lucide-chevron-down text-gold-accent transition-transform duration-300 rotate-0"
-                  fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                  stroke-width="2" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg">
-                  <path d="m6 9 6 6 6-6"></path>
-                </svg></button>
-              <div class="overflow-hidden transition-all duration-300 max-h-0 opacity-0">
-                <p class="p-5 md:p-6 text-sm text-on-surface-variant leading-relaxed font-light">Yes, Holiday Trolley is
-                  a proud member of ABTA (Y6438, P7124), the UK travel association, giving you added peace of mind when
-                  booking your premium holiday. ABTA membership means that we adhere strictly to high standards of
-                  service and codes of conduct.</p>
               </div>
             </div>
             <div
@@ -1017,56 +1004,56 @@
                 style="transform: translateX(-16.6667%); transition: transform 0.5s ease-in-out;">
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Atlantis The Palm Dubai" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Atlantis The Palm Dubai" class="object-contain"
                     src="Assets/Hotels/Atlantis_the_Palm_Dubai_c3f00d7fbb.png" style="width: 6vw; max-width: 6vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Hard Rock Hotel &amp; Casino" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Hard Rock Hotel &amp; Casino" class="object-contain"
                     src="Assets/Hotels/logo_HRHC_01_7b9d9ddd22.png" style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="TAJ Hotels" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="TAJ Hotels" class="object-contain"
                     src="Assets/Hotels/Group_1201_9c5e73939c.png" style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Banyan Tree" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Banyan Tree" class="object-contain"
                     src="Assets/Hotels/layer1_e8b490c08b.png" style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Emerald Collection" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Emerald Collection" class="object-contain"
                     src="Assets/Hotels/5db83fc3eebc46507e1162bb_emerald_collection_color_vertical_f107ef9987.png"
                     style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="The Cocoon Collection" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="The Cocoon Collection" class="object-contain"
                     src="Assets/Hotels/TCC_Corporate_Con_CMYK_Pos_Nero_62a499299b.png"
                     style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Atlantis The Palm Dubai" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Atlantis The Palm Dubai" class="object-contain"
                     src="Assets/Hotels/Atlantis_the_Palm_Dubai_c3f00d7fbb.png" style="width: 6vw; max-width: 6vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Hard Rock Hotel &amp; Casino" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Hard Rock Hotel &amp; Casino" class="object-contain"
                     src="Assets/Hotels/logo_HRHC_01_7b9d9ddd22.png" style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="TAJ Hotels" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="TAJ Hotels" class="object-contain"
                     src="Assets/Hotels/Group_1201_9c5e73939c.png" style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Banyan Tree" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Banyan Tree" class="object-contain"
                     src="Assets/Hotels/layer1_e8b490c08b.png" style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Emerald Collection" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Emerald Collection" class="object-contain"
                     src="Assets/Hotels/5db83fc3eebc46507e1162bb_emerald_collection_color_vertical_f107ef9987.png"
                     style="width: 6vw; max-width: 6vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="The Cocoon Collection" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="The Cocoon Collection" class="object-contain"
                     src="Assets/Hotels/TCC_Corporate_Con_CMYK_Pos_Nero_62a499299b.png"
                     style="width: 6vw; max-width: 6vw;" /></div>
               </div><button aria-label="Previous"
@@ -1096,115 +1083,115 @@
                 style="transform: translateX(-16.6667%); transition: transform 0.5s ease-in-out;">
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Etihad Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Etihad Airways" class="object-contain"
                     src="Assets/Airlines/etihad_logo_2aa3a6f875.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="SriLankan Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="SriLankan Airlines" class="object-contain"
                     src="Assets/Airlines/sri_lankan_airlines_logo_bff26d714c.png"
                     style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Air India" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Air India" class="object-contain"
                     src="Assets/Airlines/air_india_logo_2d854262a9.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Turkish Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Turkish Airlines" class="object-contain"
                     src="Assets/Airlines/turkish_airlines_logo_439238dd02.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Singapore Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Singapore Airlines" class="object-contain"
                     src="Assets/Airlines/singapore_airlines_logo_e8b86222af.png"
                     style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Vietnam Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Vietnam Airlines" class="object-contain"
                     src="Assets/Airlines/vietnam_airlines_logo_6666034ef8.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Emirates" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Emirates" class="object-contain"
                     src="Assets/Airlines/emirates_logo_e0645eedaf.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Qatar Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Qatar Airways" class="object-contain"
                     src="Assets/Airlines/qatar_airlines_logo_4b806b7da4.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="British Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="British Airways" class="object-contain"
                     src="Assets/Airlines/british_airways_logo_3782351f99.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Cathay Pacific" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Cathay Pacific" class="object-contain"
                     src="Assets/Airlines/cathay_pacific_logo_cc7b731ac9.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Kenya Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Kenya Airways" class="object-contain"
                     src="Assets/Airlines/kenya_airways_logo_8b632f0537.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Gulf Air" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Gulf Air" class="object-contain"
                     src="Assets/Airlines/gulf_air_logo_5281b00d3b.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Etihad Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Etihad Airways" class="object-contain"
                     src="Assets/Airlines/etihad_logo_2aa3a6f875.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="SriLankan Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="SriLankan Airlines" class="object-contain"
                     src="Assets/Airlines/sri_lankan_airlines_logo_bff26d714c.png"
                     style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Air India" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Air India" class="object-contain"
                     src="Assets/Airlines/air_india_logo_2d854262a9.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Turkish Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Turkish Airlines" class="object-contain"
                     src="Assets/Airlines/turkish_airlines_logo_439238dd02.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Singapore Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Singapore Airlines" class="object-contain"
                     src="Assets/Airlines/singapore_airlines_logo_e8b86222af.png"
                     style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Vietnam Airlines" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Vietnam Airlines" class="object-contain"
                     src="Assets/Airlines/vietnam_airlines_logo_6666034ef8.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Emirates" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Emirates" class="object-contain"
                     src="Assets/Airlines/emirates_logo_e0645eedaf.png" style="width: 16vw; max-width: 16vw;" /></div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Qatar Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Qatar Airways" class="object-contain"
                     src="Assets/Airlines/qatar_airlines_logo_4b806b7da4.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="British Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="British Airways" class="object-contain"
                     src="Assets/Airlines/british_airways_logo_3782351f99.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Cathay Pacific" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Cathay Pacific" class="object-contain"
                     src="Assets/Airlines/cathay_pacific_logo_cc7b731ac9.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Kenya Airways" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Kenya Airways" class="object-contain"
                     src="Assets/Airlines/kenya_airways_logo_8b632f0537.png" style="width: 16vw; max-width: 16vw;" />
                 </div>
                 <div
                   class="flex-none flex items-center justify-center py-6 opacity-100 hover:opacity-100 transition-opacity cursor-default"
-                  style="width: 16.6667%;"><img alt="Gulf Air" class="object-contain"
+                  style="width: 16.6667%;"><img loading="lazy" decoding="async" alt="Gulf Air" class="object-contain"
                     src="Assets/Airlines/gulf_air_logo_5281b00d3b.png" style="width: 16vw; max-width: 16vw;" /></div>
               </div><button aria-label="Previous"
                 class="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-20 w-9 h-9 rounded-full bg-gold-accent items-center justify-center text-pure-white shadow hover:opacity-90 transition-opacity cursor-pointer"><svg
@@ -1229,7 +1216,7 @@
         <div class="wrap max-w-container-max mx-auto">
           <div class="foot-grid">
             <div class="foot-col ">
-              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley">
+              <img class="foot-logo" src="Assets/Logo.webp" alt="Holiday Trolley" loading="lazy" decoding="async">
               <p>At Holiday Trolley, we pride ourselves on being one of the leading travel service providers. We specialize in creating tailored holiday packages designed to turn your dream getaway into reality.</p>
             </div>
             <div class="foot-col">
@@ -1253,11 +1240,11 @@
               <ul style="margin-bottom:32px">
                 <li><a href="#">Instagram</a></li><li><a href="#">Facebook</a></li>
               </ul>
-              <img class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected">
+              <img loading="lazy" decoding="async" class="atol-badge" src="Assets/ATOL-&-IATA.png" alt="ATOL & IATA Protected">
             </div>
           </div>
           <div class="legal">
-            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no- 218057223.</h5>
+            <h5>Holiday Trolley is a trading name of Holiday Trolley Ltd. Registered in England. VAT Registration no- 218057223. IATA No. 91204540.</h5>
             <p>All the flight-inclusive holidays on this website are financially protected by the ATOL scheme. When you pay you will be supplied with an ATOL Certificate. Please ask for it and check to ensure that everything you booked (flights, hotels and other services) is listed on it. If you do receive an ATOL Certificate but all the parts of your trip are not listed on it, those parts will not be ATOL protected. Some of the flights on this website are also financially protected by the ATOL scheme, but ATOL protection does not apply to all flights. Holiday Trolley will provide you with information on the protection that applies in the case of each flight before you make your booking. If you do not receive an ATOL Certificate, then the booking will not be ATOL protected. Please see our booking conditions for information, or for more information about financial protection and the ATOL Certificate go to: www.caa.co.uk.</p>
           </div>
         </div>
@@ -1265,7 +1252,7 @@
           <div class="wrap botbar-in">
             <p>Copyright &copy; 2026 Holiday Trolley UK. All rights reserved.</p>
             <div class="pays">
-              <img src="Assets/Payment-Methods.webp" alt="Payment Methods">
+              <img loading="lazy" decoding="async" src="Assets/Payment-Methods.webp" alt="Payment Methods">
             </div>
           </div>
         </div>
@@ -1408,7 +1395,7 @@
                 <h4 class="text-[0.625rem] font-bold text-deep-navy uppercase tracking-wider">Official Registrations
                 </h4>
                 <p class="text-[0.625rem] text-on-surface-variant/80 leading-relaxed font-sans">Holiday Trolley Ltd (No.
-                  08234384). ATOL Protected 3517. Secure banking guarantees apply.</p>
+                  08234384). ATOL Protected 11965. IATA No. 91204540. Secure banking guarantees apply.</p>
               </div>
             </div>
             <form
@@ -1461,7 +1448,7 @@
             <path d="m6 6 12 12"></path>
           </svg></button>
         <div class="overflow-y-auto flex-1">
-          <div class="relative h-60 md:h-72 w-full"><img alt="Turkish Treasures &amp; Maldives Serenity Retreat"
+          <div class="relative h-60 md:h-72 w-full"><img loading="lazy" decoding="async" alt="Turkish Treasures &amp; Maldives Serenity Retreat"
               class="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkpzmm7Hvq65Z-Iq_6JnbOjWMwJ2xH1kRccSteW88ItMy2rD_FtjXG6kQwIe10EGXk0zJ22hXNRLC6qMTIFmPcS52lNSrRixewpiBFP2KdY04eOKnKsOWqHh8GYnPGoSg-O3NaHwZ6MrtylzTR4PSI54AZYF045h1PqUiFu8-drNXzUpHiqWmBB_SH2C3BuKtvvQB1JWk7rgB1J2SIN7_m4r82bnhixD99FW1SvV4Xv4GtwD-C1I1b_acS2LSzg9idX-mB5lP5Vlk" />
             <div
@@ -1631,9 +1618,7 @@
                     <path d="M21.801 10A10 10 0 1 1 17 3.335"></path>
                     <path d="m9 11 3 3L22 4"></path>
                   </svg>
-                  <p class="text-[0.625rem] text-on-surface-variant leading-relaxed font-medium">100% Dual protected
-                    under standard <strong>ATOL (Licence 3517)</strong> &amp; <strong>ABTA</strong>. Your deposits and
-                    flight safety are guaranteed.</p>
+                  <p class="text-[0.625rem] text-on-surface-variant leading-relaxed font-medium">100% ATOL protected (No. 11965). Your deposits and$3flight safety are fully guaranteed.</p>
                 </div>
                 <div class="space-y-2 pt-2"><a href="contact.html"
                     class="w-full bg-gold-accent text-pure-white text-center py-3 font-sans text-xs tracking-wider uppercase font-extrabold hover:bg-gold-hover transition-all flex items-center justify-center gap-1.5 cursor-pointer shadow-sm">Enquire
@@ -1746,7 +1731,7 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>
